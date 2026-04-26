@@ -4,33 +4,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.routefinder.model.Line;
+import com.routefinder.model.Station;
+
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class StationDataService {
-
-    public static class Line {
-        public String code;
-        public String name;
-        
-        @Override
-        public String toString() {
-            return name;
-        }
-    }
-
-    public static class Station {
-        public String id;
-        public String name;
-        public String line;
-        
-        @Override
-        public String toString() {
-            return name + " (" + id + ")";
-        }
-    }
 
     private List<Line> lines = new ArrayList<>();
     private List<Station> stations = new ArrayList<>();

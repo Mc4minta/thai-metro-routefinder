@@ -1,6 +1,6 @@
-package com.routefinder.ui;
+package com.routefinder.view;
 
-import com.routefinder.MainApplication;
+import com.routefinder.controller.RouteController;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -12,7 +12,7 @@ public class ResultPanel extends JPanel {
     private JTable table;
     private JLabel totalFareLabel;
 
-    public ResultPanel(MainApplication app) {
+    public ResultPanel(RouteController controller) {
 
         setLayout(new BorderLayout());
         setBackground(new Color(236, 240, 245));
@@ -50,7 +50,7 @@ public class ResultPanel extends JPanel {
 
         JButton back = new JButton("Back");
         styleButton(back);
-        back.addActionListener(e -> app.showInput());
+        back.addActionListener(e -> controller.onBackToInput());
 
         JPanel btnPanel = new JPanel();
         btnPanel.setBackground(new Color(236, 240, 245));

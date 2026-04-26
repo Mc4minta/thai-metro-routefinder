@@ -1,7 +1,8 @@
-package com.routefinder.ui;
+package com.routefinder.view;
 
-import com.routefinder.MainApplication;
-import com.routefinder.service.StationDataService;
+import com.routefinder.controller.RouteController;
+import com.routefinder.model.Line;
+import com.routefinder.model.Station;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,13 +10,13 @@ import java.awt.event.ItemEvent;
 
 public class InputPanel extends JPanel {
 
-    private JComboBox<StationDataService.Line> lineComboStart;
-    private JComboBox<StationDataService.Station> stationComboStart;
+    private JComboBox<Line> lineComboStart;
+    private JComboBox<Station> stationComboStart;
 
-    private JComboBox<StationDataService.Line> lineComboEnd;
-    private JComboBox<StationDataService.Station> stationComboEnd;
+    private JComboBox<Line> lineComboEnd;
+    private JComboBox<Station> stationComboEnd;
 
-    public InputPanel(MainApplication app) {
+    public InputPanel(RouteController controller) {
 
         setBackground(new Color(245, 247, 250));
         setLayout(new GridBagLayout());
@@ -24,15 +25,38 @@ public class InputPanel extends JPanel {
         gbc.insets = new Insets(12, 20, 12, 20);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel title = new JLabel("MRT/BTS Fare Calculator");
-        title.setFont(new Font("Segoe UI", Font.BOLD, 26));
-        title.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel thaiTitle = new JLabel("โปรแกรมคำนวณราคารถไฟฟ้าไทย");
+        thaiTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
+        thaiTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
+        JLabel engTitle = new JLabel("Thai Mass Transit Fare Calculator");
+        engTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
+        engTitle.setHorizontalAlignment(SwingConstants.CENTER);
+
+        // ================= TITLE (THAI) =================
+        GridBagConstraints titleThai = (GridBagConstraints) gbc.clone();
+        titleThai.gridx = 0;
+        titleThai.gridy = 0;
+        titleThai.gridwidth = 2;
+        titleThai.insets = new Insets(25, 20, 5, 20);
+
+        add(thaiTitle, titleThai);
+
+        // ================= TITLE (ENGLISH) =================
+        GridBagConstraints titleEng = (GridBagConstraints) gbc.clone();
+        titleEng.gridx = 0;
+        titleEng.gridy = 1;
+        titleEng.gridwidth = 2;
+        titleEng.insets = new Insets(0, 20, 30, 20);
+
+        add(engTitle, titleEng);
+
+        // RESET for form section
+        gbc = new GridBagConstraints();
+        gbc.insets = new Insets(12, 20, 12, 20);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 2;
-        add(title, gbc);
-
+        gbc.gridy = 2;
         gbc.gridwidth = 1;
 
         // ================= START LINE =================
@@ -42,10 +66,10 @@ public class InputPanel extends JPanel {
 
         gbc.gridx = 1;
         lineComboStart = new JComboBox<>();
-        for (StationDataService.Line line : app.getDataService().getLines()) {
+        for (Line line : controller.getLines()) {
             lineComboStart.addItem(line);
         }
-        styleCombo(lineComboStart, "Select starting line...");
+        styleCombo(lineComboStart, "เลือกสายต้นทาง...");
         add(lineComboStart, gbc);
 
         // ================= START STATION =================
@@ -55,7 +79,7 @@ public class InputPanel extends JPanel {
 
         gbc.gridx = 1;
         stationComboStart = new JComboBox<>();
-        styleCombo(stationComboStart, "Select starting station...");
+        styleCombo(stationComboStart, "เลือกสถานีต้นทาง...");
         add(stationComboStart, gbc);
 
         // ================= END LINE =================
@@ -65,10 +89,10 @@ public class InputPanel extends JPanel {
 
         gbc.gridx = 1;
         lineComboEnd = new JComboBox<>();
-        for (StationDataService.Line line : app.getDataService().getLines()) {
+        for (Line line : controller.getLines()) {
             lineComboEnd.addItem(line);
         }
-        styleCombo(lineComboEnd, "Select destination line...");
+        styleCombo(lineComboEnd, "เลือกสายปลายทาง...");
         add(lineComboEnd, gbc);
 
         // ================= END STATION =================
@@ -78,25 +102,26 @@ public class InputPanel extends JPanel {
 
         gbc.gridx = 1;
         stationComboEnd = new JComboBox<>();
-        styleCombo(stationComboEnd, "Select destination station...");
+        styleCombo(stationComboEnd, "เลือกสถานีปลายทาง...");
         add(stationComboEnd, gbc);
 
         // Add Listeners
         lineComboStart.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                updateStations(stationComboStart, (StationDataService.Line) e.getItem(), app.getDataService());
+                updateStations(stationComboStart, (Line) e.getItem(), controller);
             }
         });
 
         lineComboEnd.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                updateStations(stationComboEnd, (StationDataService.Line) e.getItem(), app.getDataService());
+                updateStations(stationComboEnd, (Line) e.getItem(), controller);
             }
         });
 
         // Initialize stations empty
         lineComboStart.setSelectedIndex(-1);
         lineComboEnd.setSelectedIndex(-1);
+        
         // ================= BUTTONS =================
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setBackground(new Color(245, 247, 250));
@@ -107,7 +132,7 @@ public class InputPanel extends JPanel {
         styleButton(clear, new Color(200, 200, 200), Color.BLACK);
         styleButton(calc, new Color(41, 128, 185), Color.WHITE);
 
-        calc.addActionListener(e -> app.showResult());
+        calc.addActionListener(e -> controller.onCalculateRoute());
         clear.addActionListener(e -> {
             lineComboStart.setSelectedIndex(-1);
             lineComboEnd.setSelectedIndex(-1);
@@ -154,11 +179,10 @@ public class InputPanel extends JPanel {
         });
     }
 
-    private void updateStations(JComboBox<StationDataService.Station> combo, StationDataService.Line line,
-            StationDataService service) {
+    private void updateStations(JComboBox<Station> combo, Line line, RouteController controller) {
         combo.removeAllItems();
         if (line != null) {
-            for (StationDataService.Station s : service.getStationsByLine(line.code)) {
+            for (Station s : controller.getStationsByLine(line.code)) {
                 combo.addItem(s);
             }
         }

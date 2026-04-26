@@ -1,6 +1,9 @@
-com\routefinder\service\StationDataService$Station.class
-com\routefinder\service\StationDataService$Line.class
-com\routefinder\ui\InputPanel$1.class
-com\routefinder\ui\InputPanel.class
+com\routefinder\model\Line.class
+com\routefinder\view\InputPanel.class
+com\routefinder\view\ResultPanel.class
+com\routefinder\view\MainFrame.class
+com\routefinder\view\InputPanel$1.class
+com\routefinder\controller\RouteController.class
+com\routefinder\model\Station.class
+com\routefinder\MainApplication.class
 com\routefinder\service\StationDataService.class
-com\routefinder\ui\ResultPanel.class
