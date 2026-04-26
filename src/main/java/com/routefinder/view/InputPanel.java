@@ -214,6 +214,7 @@ public class InputPanel extends JPanel {
                 } else {
                     setForeground(Color.BLACK);
                 }
+                setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
                 return this;
             }
         });
