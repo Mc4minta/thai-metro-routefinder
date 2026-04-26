@@ -164,7 +164,6 @@ public class InputPanel extends JPanel {
         gbc.gridwidth = 2;
         add(buttonPanel, gbc);
 
-        // Remove initial focus from the first combo box
         setFocusable(true);
         SwingUtilities.invokeLater(this::requestFocusInWindow);
     }
@@ -182,7 +181,7 @@ public class InputPanel extends JPanel {
         box.setFont(new Font("Tahoma", Font.PLAIN, 14));
         box.setBackground(Color.WHITE);
         box.setPreferredSize(new Dimension(320, 35));
-        box.setFocusable(false); // Removes the blue focus highlight
+        box.setFocusable(false);
 
         box.setRenderer(new DefaultListCellRenderer() {
             @Override
