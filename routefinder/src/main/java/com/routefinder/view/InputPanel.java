@@ -182,6 +182,7 @@ public class InputPanel extends JPanel {
         box.setFont(new Font("Tahoma", Font.PLAIN, 14));
         box.setBackground(Color.WHITE);
         box.setPreferredSize(new Dimension(320, 35));
+        box.setFocusable(false); // Removes the blue focus highlight
 
         box.setRenderer(new DefaultListCellRenderer() {
             @Override
@@ -206,6 +207,7 @@ public class InputPanel extends JPanel {
                 combo.addItem(s);
             }
         }
+        combo.setSelectedIndex(-1);
     }
 
     private void styleButton(JButton btn, Color bg, Color fg) {
