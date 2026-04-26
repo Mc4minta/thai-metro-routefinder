@@ -7,6 +7,7 @@ import com.google.gson.JsonObject;
 import com.routefinder.model.Line;
 import com.routefinder.model.Station;
 
+import java.awt.Color;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -20,6 +21,33 @@ public class StationDataService {
 
     public StationDataService() {
         loadData();
+        loadColors();
+    }
+
+    private void loadColors() {
+        try (Reader reader = new InputStreamReader(getClass().getResourceAsStream("/color-code.json"))) {
+            Gson gson = new Gson();
+            JsonObject colorMap = gson.fromJson(reader, JsonObject.class);
+
+            for (Line line : lines) {
+                if (colorMap.has(line.code)) {
+                    JsonArray rgb = colorMap.getAsJsonArray(line.code);
+                    line.color = new Color(
+                        rgb.get(0).getAsInt(),
+                        rgb.get(1).getAsInt(),
+                        rgb.get(2).getAsInt()
+                    );
+                } else {
+                    line.color = Color.WHITE;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Default to white if loading fails
+            for (Line line : lines) {
+                if (line.color == null) line.color = Color.WHITE;
+            }
+        }
     }
 
     private void loadData() {

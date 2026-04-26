@@ -30,27 +30,13 @@ public class InputPanel extends JPanel {
         thaiTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
         thaiTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
-        // JLabel engTitle = new JLabel("Thai Mass Transit Fare Route Finder");
-        // engTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
-        // engTitle.setHorizontalAlignment(SwingConstants.CENTER);
-
         // ================= TITLE (THAI) =================
         GridBagConstraints titleThai = (GridBagConstraints) gbc.clone();
         titleThai.gridx = 0;
         titleThai.gridy = 0;
         titleThai.gridwidth = 2;
-        // titleThai.insets = new Insets(25, 20, 5, 20);
 
         add(thaiTitle, titleThai);
-
-        // // ================= TITLE (ENGLISH) =================
-        // GridBagConstraints titleEng = (GridBagConstraints) gbc.clone();
-        // titleEng.gridx = 0;
-        // titleEng.gridy = 1;
-        // titleEng.gridwidth = 2;
-        // titleEng.insets = new Insets(0, 20, 30, 20);
-
-        // add(engTitle, titleEng);
 
         // RESET for form section
         gbc = new GridBagConstraints();
@@ -63,7 +49,6 @@ public class InputPanel extends JPanel {
         // ================= START LINE =================
         gbc.gridy++;
         gbc.gridx = 0;
-        // add(label("Starting Line:"), gbc);
         add(label("สายต้นทาง:"), gbc);
 
         gbc.gridx = 1;
@@ -71,24 +56,22 @@ public class InputPanel extends JPanel {
         for (Line line : controller.getLines()) {
             lineComboStart.addItem(line);
         }
-        styleCombo(lineComboStart, "เลือกสายต้นทาง...");
+        styleCombo(lineComboStart, "เลือกสายต้นทาง...", Color.WHITE);
         add(lineComboStart, gbc);
 
         // ================= START STATION =================
         gbc.gridy++;
         gbc.gridx = 0;
-        // add(label("Starting Station:"), gbc);
         add(label("สถานีต้นทาง:"), gbc);
 
         gbc.gridx = 1;
         stationComboStart = new JComboBox<>();
-        styleCombo(stationComboStart, "เลือกสถานีต้นทาง...");
+        styleCombo(stationComboStart, "เลือกสถานีต้นทาง...", Color.WHITE);
         add(stationComboStart, gbc);
 
         // ================= END LINE =================
         gbc.gridy++;
         gbc.gridx = 0;
-        // add(label("Destination Line:"), gbc);
         add(label("สายปลายทาง:"), gbc);
 
         gbc.gridx = 1;
@@ -96,39 +79,68 @@ public class InputPanel extends JPanel {
         for (Line line : controller.getLines()) {
             lineComboEnd.addItem(line);
         }
-        styleCombo(lineComboEnd, "เลือกสายปลายทาง...");
+        styleCombo(lineComboEnd, "เลือกสายปลายทาง...", Color.WHITE);
         add(lineComboEnd, gbc);
 
         // ================= END STATION =================
         gbc.gridy++;
         gbc.gridx = 0;
-        // add(label("Destination Station:"), gbc);
         add(label("สถานีปลายทาง:"), gbc);
 
         gbc.gridx = 1;
         stationComboEnd = new JComboBox<>();
-        styleCombo(stationComboEnd, "เลือกสถานีปลายทาง...");
+        styleCombo(stationComboEnd, "เลือกสถานีปลายทาง...", Color.WHITE);
         add(stationComboEnd, gbc);
 
         // Add Listeners
         lineComboStart.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                updateStations(stationComboStart, (Line) e.getItem(), controller);
+                Line selected = (Line) e.getItem();
+                updateStations(stationComboStart, selected, controller);
                 stationComboStart.setEnabled(true);
+
+                // Dynamic coloring happens here when a line is selected
+                Color bg = selected.color != null ? selected.color : Color.WHITE;
+                Color fg = getContrastColor(bg);
+                lineComboStart.setBackground(bg);
+                lineComboStart.setForeground(fg);
+                stationComboStart.setBackground(bg);
+                stationComboStart.setForeground(fg);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboStart.setEnabled(false);
                 stationComboStart.removeAllItems();
+
+                // Reset both to Color.WHITE when deselected
+                lineComboStart.setBackground(Color.WHITE);
+                lineComboStart.setForeground(Color.BLACK);
+                stationComboStart.setBackground(Color.WHITE);
+                stationComboStart.setForeground(Color.BLACK);
             }
             validateInputs();
         });
 
         lineComboEnd.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                updateStations(stationComboEnd, (Line) e.getItem(), controller);
+                Line selected = (Line) e.getItem();
+                updateStations(stationComboEnd, selected, controller);
                 stationComboEnd.setEnabled(true);
+
+                // Dynamic coloring happens here when a line is selected
+                Color bg = selected.color != null ? selected.color : Color.WHITE;
+                Color fg = getContrastColor(bg);
+                lineComboEnd.setBackground(bg);
+                lineComboEnd.setForeground(fg);
+                stationComboEnd.setBackground(bg);
+                stationComboEnd.setForeground(fg);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboEnd.setEnabled(false);
                 stationComboEnd.removeAllItems();
+
+                // Reset both to Color.WHITE when deselected
+                lineComboEnd.setBackground(Color.WHITE);
+                lineComboEnd.setForeground(Color.BLACK);
+                stationComboEnd.setBackground(Color.WHITE);
+                stationComboEnd.setForeground(Color.BLACK);
             }
             validateInputs();
         });
@@ -151,9 +163,7 @@ public class InputPanel extends JPanel {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setBackground(new Color(245, 247, 250));
 
-        // JButton clear = new JButton("Clear");
         JButton clear = new JButton("ล้างค่า");
-        // JButton calc = new JButton("Find Route");
 
         styleButton(clear, new Color(200, 200, 200), Color.BLACK);
 
@@ -188,6 +198,18 @@ public class InputPanel extends JPanel {
         calc.setEnabled(startSelected && endSelected);
     }
 
+    /**
+     * Determines whether black or white text should be used based on the background
+     * color's luminance for better readability.
+     */
+    private Color getContrastColor(Color c) {
+        if (c == null || c.equals(Color.WHITE))
+            return Color.BLACK;
+        // Standard formula for relative luminance
+        double luminance = (0.299 * c.getRed() + 0.587 * c.getGreen() + 0.114 * c.getBlue()) / 255;
+        return luminance > 0.5 ? Color.BLACK : Color.WHITE;
+    }
+
     // ================= UI HELPERS =================
 
     private JLabel label(String text) {
@@ -197,9 +219,12 @@ public class InputPanel extends JPanel {
         return l;
     }
 
-    private void styleCombo(JComboBox<?> box, String hint) {
+    private void styleCombo(JComboBox<?> box, String hint, Color bgColor) {
         box.setFont(new Font("Tahoma", Font.PLAIN, 14));
-        box.setBackground(Color.WHITE);
+        box.setBackground(bgColor);
+        // setOpaque(true) is needed because some L&Fs don't paint background for
+        // JComboBox by default
+        box.setOpaque(true);
         box.setPreferredSize(new Dimension(550, 35));
         box.setFocusable(false);
 
@@ -208,12 +233,33 @@ public class InputPanel extends JPanel {
             public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
                     boolean cellHasFocus) {
                 super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
                 if (value == null && index == -1) {
                     setText(hint);
                     setForeground(Color.GRAY);
+                    setBackground(Color.WHITE);
                 } else {
-                    setForeground(Color.BLACK);
+                    Color bg = Color.WHITE;
+                    Color fg = Color.BLACK;
+
+                    if (value instanceof Line) {
+                        Line line = (Line) value;
+                        bg = line.color != null ? line.color : Color.WHITE;
+                        fg = getContrastColor(bg);
+                    } else if (value instanceof Station) {
+                        // Use the current background of the combo box for stations
+                        bg = box.getBackground();
+                        fg = box.getForeground();
+                    }
+
+                    if (isSelected) {
+                        setBackground(bg.darker());
+                    } else {
+                        setBackground(bg);
+                    }
+                    setForeground(fg);
                 }
+
                 setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
                 return this;
             }

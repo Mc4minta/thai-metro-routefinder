@@ -24,3 +24,9 @@ MRT Route Finder is a Java Swing application that helps users find the shortest 
 ## License
 
 This project is licensed under the MIT License.
+
+## To run
+
+```powershell
+mvn compile exec:java "-Dexec.mainClass=com.routefinder.MainApplication"
+```
