@@ -163,6 +163,10 @@ public class InputPanel extends JPanel {
         gbc.gridx = 0;
         gbc.gridwidth = 2;
         add(buttonPanel, gbc);
+
+        // Remove initial focus from the first combo box
+        setFocusable(true);
+        SwingUtilities.invokeLater(this::requestFocusInWindow);
     }
 
     // ================= UI HELPERS =================
