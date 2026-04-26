@@ -190,7 +190,11 @@ public class InputPanel extends JPanel {
 
         styleButton(clear, new Color(200, 200, 200), Color.BLACK);
 
-        calc.addActionListener(e -> controller.onCalculateRoute());
+        calc.addActionListener(e -> {
+            Station start = (Station) stationComboStart.getSelectedItem();
+            Station end = (Station) stationComboEnd.getSelectedItem();
+            controller.onCalculateRoute(start, end);
+        });
         clear.addActionListener(e -> {
             lineComboStart.setSelectedIndex(-1);
             lineComboEnd.setSelectedIndex(-1);

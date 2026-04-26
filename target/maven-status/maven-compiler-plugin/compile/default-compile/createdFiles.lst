@@ -1,5 +1,6 @@
 com\routefinder\model\Line.class
 com\routefinder\view\MainFrame.class
+com\routefinder\model\PathEdge.class
 com\routefinder\view\InputPanel$1.class
 com\routefinder\controller\RouteController.class
 com\routefinder\model\Station.class
