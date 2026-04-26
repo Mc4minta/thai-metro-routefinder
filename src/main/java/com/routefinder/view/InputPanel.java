@@ -104,8 +104,6 @@ public class InputPanel extends JPanel {
                 Color fg = getContrastColor(bg);
                 lineComboStart.setBackground(bg);
                 lineComboStart.setForeground(fg);
-                stationComboStart.setBackground(bg);
-                stationComboStart.setForeground(fg);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboStart.setEnabled(false);
                 stationComboStart.removeAllItems();
@@ -130,8 +128,6 @@ public class InputPanel extends JPanel {
                 Color fg = getContrastColor(bg);
                 lineComboEnd.setBackground(bg);
                 lineComboEnd.setForeground(fg);
-                stationComboEnd.setBackground(bg);
-                stationComboEnd.setForeground(fg);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboEnd.setEnabled(false);
                 stationComboEnd.removeAllItems();
@@ -145,8 +141,35 @@ public class InputPanel extends JPanel {
             validateInputs();
         });
 
-        stationComboStart.addActionListener(e -> validateInputs());
-        stationComboEnd.addActionListener(e -> validateInputs());
+        stationComboStart.addActionListener(e -> {
+            Station selected = (Station) stationComboStart.getSelectedItem();
+            Line line = (Line) lineComboStart.getSelectedItem();
+            if (selected != null && line != null && line.color != null) {
+                Color bg = line.color;
+                Color fg = getContrastColor(bg);
+                stationComboStart.setBackground(bg);
+                stationComboStart.setForeground(fg);
+            } else {
+                stationComboStart.setBackground(Color.WHITE);
+                stationComboStart.setForeground(Color.BLACK);
+            }
+            validateInputs();
+        });
+
+        stationComboEnd.addActionListener(e -> {
+            Station selected = (Station) stationComboEnd.getSelectedItem();
+            Line line = (Line) lineComboEnd.getSelectedItem();
+            if (selected != null && line != null && line.color != null) {
+                Color bg = line.color;
+                Color fg = getContrastColor(bg);
+                stationComboEnd.setBackground(bg);
+                stationComboEnd.setForeground(fg);
+            } else {
+                stationComboEnd.setBackground(Color.WHITE);
+                stationComboEnd.setForeground(Color.BLACK);
+            }
+            validateInputs();
+        });
 
         // ================= BUTTONS =================
         calc = new JButton("ค้นหาเส้นทาง");
