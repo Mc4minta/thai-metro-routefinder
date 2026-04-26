@@ -6,4 +6,5 @@ com\routefinder\model\Station.class
 com\routefinder\service\StationDataService.class
 com\routefinder\view\InputPanel.class
 com\routefinder\view\ResultPanel.class
+com\routefinder\view\Test.class
 com\routefinder\MainApplication.class

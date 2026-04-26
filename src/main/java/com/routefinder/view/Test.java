@@ -6,13 +6,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
-public class ResultPanel extends JPanel {
+public class Test extends JPanel {
 
     private JPanel routeContainer;
     private JLabel totalFareLabel;
     private JLabel subtitleLabel;
 
-    public ResultPanel(RouteController controller) {
+    public Test(RouteController controller) {
 
         setLayout(new BorderLayout());
         setBackground(new Color(236, 240, 245));
@@ -70,6 +70,36 @@ public class ResultPanel extends JPanel {
         bottom.add(btnPanel, BorderLayout.SOUTH);
 
         add(bottom, BorderLayout.SOUTH);
+
+        // ================= MOCK DATA =================
+        boolean USE_MOCK = true;
+
+        if (USE_MOCK) {
+            java.util.List<Object[]> mockRows = new java.util.ArrayList<>();
+
+            mockRows.add(new Object[] {
+                    "ท่าพระ (Tha Phra)",
+                    "เตาปูน (Tao Poon)",
+                    "BL",
+                    "16.00"
+            });
+
+            mockRows.add(new Object[] {
+                    "เตาปูน (Tao Poon)",
+                    "ศูนย์ราชการนนทบุรี (Nonthaburi Civic Center)",
+                    "PP",
+                    "15.00"
+            });
+
+            mockRows.add(new Object[] {
+                    "ศูนย์ราชการนนทบุรี",
+                    "วัดพระศรีมหาธาตุ (Wat Phra Sri Mahathat)",
+                    "PK",
+                    "18.00"
+            });
+
+            setResult(mockRows, 49.00);
+        }
     }
 
     // ================= RESULT =================
@@ -145,6 +175,7 @@ public class ResultPanel extends JPanel {
         to.setFont(font);
         to.setForeground(cTo);
 
+        // ✅ ใช้สีสายต้นทาง
         stationLbl.setFont(font);
         stationLbl.setForeground(cFrom);
 

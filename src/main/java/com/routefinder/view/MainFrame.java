@@ -14,7 +14,6 @@ public class MainFrame extends JFrame {
     private static final String RESULT = "RESULT";
 
     public MainFrame(RouteController controller) {
-        // setTitle("Thai Metro Route Finder");
         setTitle("โปรแกรมค้นหาเส้นทางรถไฟฟ้าไทย");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
