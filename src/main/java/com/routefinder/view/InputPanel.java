@@ -15,6 +15,7 @@ public class InputPanel extends JPanel {
 
     private JComboBox<Line> lineComboEnd;
     private JComboBox<Station> stationComboEnd;
+    private JButton calc;
 
     public InputPanel(RouteController controller) {
 
@@ -116,7 +117,9 @@ public class InputPanel extends JPanel {
                 stationComboStart.setEnabled(true);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboStart.setEnabled(false);
+                stationComboStart.removeAllItems();
             }
+            validateInputs();
         });
 
         lineComboEnd.addItemListener(e -> {
@@ -125,8 +128,18 @@ public class InputPanel extends JPanel {
                 stationComboEnd.setEnabled(true);
             } else if (e.getStateChange() == ItemEvent.DESELECTED) {
                 stationComboEnd.setEnabled(false);
+                stationComboEnd.removeAllItems();
             }
+            validateInputs();
         });
+
+        stationComboStart.addActionListener(e -> validateInputs());
+        stationComboEnd.addActionListener(e -> validateInputs());
+
+        // ================= BUTTONS =================
+        calc = new JButton("ค้นหาเส้นทาง");
+        calc.setEnabled(false);
+        styleButton(calc, new Color(41, 128, 185), Color.WHITE);
 
         // Initialize stations empty
         lineComboStart.setSelectedIndex(-1);
@@ -141,10 +154,8 @@ public class InputPanel extends JPanel {
         // JButton clear = new JButton("Clear");
         JButton clear = new JButton("ล้างค่า");
         // JButton calc = new JButton("Find Route");
-        JButton calc = new JButton("ค้นหาเส้นทาง");
 
         styleButton(clear, new Color(200, 200, 200), Color.BLACK);
-        styleButton(calc, new Color(41, 128, 185), Color.WHITE);
 
         calc.addActionListener(e -> controller.onCalculateRoute());
         clear.addActionListener(e -> {
@@ -154,6 +165,7 @@ public class InputPanel extends JPanel {
             stationComboEnd.removeAllItems();
             stationComboStart.setEnabled(false);
             stationComboEnd.setEnabled(false);
+            validateInputs();
         });
 
         buttonPanel.add(clear);
@@ -168,6 +180,14 @@ public class InputPanel extends JPanel {
         SwingUtilities.invokeLater(this::requestFocusInWindow);
     }
 
+    private void validateInputs() {
+        if (calc == null)
+            return;
+        boolean startSelected = stationComboStart.getSelectedItem() != null;
+        boolean endSelected = stationComboEnd.getSelectedItem() != null;
+        calc.setEnabled(startSelected && endSelected);
+    }
+
     // ================= UI HELPERS =================
 
     private JLabel label(String text) {
@@ -180,7 +200,7 @@ public class InputPanel extends JPanel {
     private void styleCombo(JComboBox<?> box, String hint) {
         box.setFont(new Font("Tahoma", Font.PLAIN, 14));
         box.setBackground(Color.WHITE);
-        box.setPreferredSize(new Dimension(320, 35));
+        box.setPreferredSize(new Dimension(550, 35));
         box.setFocusable(false);
 
         box.setRenderer(new DefaultListCellRenderer() {
