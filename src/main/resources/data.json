@@ -1162,26 +1162,6 @@
     "interchanges": [
         {
             "from": {
-                "station": "PP16",
-                "line": "PP"
-            },
-            "to": {
-                "station": "BL10",
-                "line": "BL"
-            }
-        },
-        {
-            "from": {
-                "station": "BL10",
-                "line": "BL"
-            },
-            "to": {
-                "station": "PP16",
-                "line": "PP"
-            }
-        },
-        {
-            "from": {
                 "station": "BL11",
                 "line": "BL"
             },
@@ -1207,13 +1187,13 @@
             },
             "to": {
                 "station": "N8",
-                "line": "LG"
+                "line": "N"
             }
         },
         {
             "from": {
                 "station": "N8",
-                "line": "LG"
+                "line": "N"
             },
             "to": {
                 "station": "BL13",
@@ -1227,13 +1207,13 @@
             },
             "to": {
                 "station": "N9",
-                "line": "LG"
+                "line": "N"
             }
         },
         {
             "from": {
                 "station": "N9",
-                "line": "LG"
+                "line": "N"
             },
             "to": {
                 "station": "BL14",
@@ -1267,13 +1247,13 @@
             },
             "to": {
                 "station": "A6",
-                "line": "ARL"
+                "line": "A"
             }
         },
         {
             "from": {
                 "station": "A6",
-                "line": "ARL"
+                "line": "A"
             },
             "to": {
                 "station": "BL21",
@@ -1287,13 +1267,13 @@
             },
             "to": {
                 "station": "E4",
-                "line": "LG"
+                "line": "E"
             }
         },
         {
             "from": {
                 "station": "E4",
-                "line": "LG"
+                "line": "E"
             },
             "to": {
                 "station": "BL22",
@@ -1307,13 +1287,13 @@
             },
             "to": {
                 "station": "S2",
-                "line": "DG"
+                "line": "S"
             }
         },
         {
             "from": {
                 "station": "S2",
-                "line": "DG"
+                "line": "S"
             },
             "to": {
                 "station": "BL26",
@@ -1327,17 +1307,57 @@
             },
             "to": {
                 "station": "S12",
-                "line": "DG"
+                "line": "S"
             }
         },
         {
             "from": {
                 "station": "S12",
-                "line": "DG"
+                "line": "S"
             },
             "to": {
                 "station": "BL34",
                 "line": "BL"
+            }
+        },
+        {
+            "from": {
+                "station": "PP16",
+                "line": "PP"
+            },
+            "to": {
+                "station": "BL10",
+                "line": "BL"
+            }
+        },
+        {
+            "from": {
+                "station": "BL10",
+                "line": "BL"
+            },
+            "to": {
+                "station": "PP16",
+                "line": "PP"
+            }
+        },
+        {
+            "from": {
+                "station": "PP15",
+                "line": "PP"
+            },
+            "to": {
+                "station": "RN02",
+                "line": "RN"
+            }
+        },
+        {
+            "from": {
+                "station": "RN02",
+                "line": "RN"
+            },
+            "to": {
+                "station": "PP15",
+                "line": "PP"
             }
         },
         {
@@ -1387,13 +1407,13 @@
             },
             "to": {
                 "station": "N17",
-                "line": "LG"
+                "line": "N"
             }
         },
         {
             "from": {
                 "station": "N17",
-                "line": "LG"
+                "line": "N"
             },
             "to": {
                 "station": "PK16",
@@ -1407,13 +1427,13 @@
             },
             "to": {
                 "station": "A4",
-                "line": "ARL"
+                "line": "A"
             }
         },
         {
             "from": {
                 "station": "A4",
-                "line": "ARL"
+                "line": "A"
             },
             "to": {
                 "station": "YL11",
@@ -1427,13 +1447,13 @@
             },
             "to": {
                 "station": "E15",
-                "line": "LG"
+                "line": "E"
             }
         },
         {
             "from": {
                 "station": "E15",
-                "line": "LG"
+                "line": "E"
             },
             "to": {
                 "station": "YL23",
@@ -1442,42 +1462,62 @@
         },
         {
             "from": {
-                "station": "CEN_LG",
-                "line": "LG"
-            },
-            "to": {
-                "station": "CEN_DG",
-                "line": "DG"
-            }
-        },
-        {
-            "from": {
-                "station": "CEN_DG",
-                "line": "DG"
-            },
-            "to": {
-                "station": "CEN_LG",
-                "line": "LG"
-            }
-        },
-        {
-            "from": {
                 "station": "N2",
-                "line": "LG"
+                "line": "N"
             },
             "to": {
                 "station": "A8",
-                "line": "ARL"
+                "line": "A"
             }
         },
         {
             "from": {
                 "station": "A8",
-                "line": "ARL"
+                "line": "A"
             },
             "to": {
                 "station": "N2",
-                "line": "LG"
+                "line": "N"
+            }
+        },
+        {
+            "from": {
+                "station": "S7",
+                "line": "S"
+            },
+            "to": {
+                "station": "G1",
+                "line": "G"
+            }
+        },
+        {
+            "from": {
+                "station": "G1",
+                "line": "G"
+            },
+            "to": {
+                "station": "S7",
+                "line": "S"
+            }
+        },
+        {
+            "from": {
+                "station": "RW01",
+                "line": "RW"
+            },
+            "to": {
+                "station": "BL11",
+                "line": "BL"
+            }
+        },
+        {
+            "from": {
+                "station": "BL11",
+                "line": "BL"
+            },
+            "to": {
+                "station": "RW01",
+                "line": "RW"
             }
         }
     ]
