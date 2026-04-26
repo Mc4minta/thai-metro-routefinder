@@ -113,18 +113,26 @@ public class InputPanel extends JPanel {
         lineComboStart.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 updateStations(stationComboStart, (Line) e.getItem(), controller);
+                stationComboStart.setEnabled(true);
+            } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                stationComboStart.setEnabled(false);
             }
         });
 
         lineComboEnd.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 updateStations(stationComboEnd, (Line) e.getItem(), controller);
+                stationComboEnd.setEnabled(true);
+            } else if (e.getStateChange() == ItemEvent.DESELECTED) {
+                stationComboEnd.setEnabled(false);
             }
         });
 
         // Initialize stations empty
         lineComboStart.setSelectedIndex(-1);
         lineComboEnd.setSelectedIndex(-1);
+        stationComboStart.setEnabled(false);
+        stationComboEnd.setEnabled(false);
 
         // ================= BUTTONS =================
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
@@ -144,6 +152,8 @@ public class InputPanel extends JPanel {
             lineComboEnd.setSelectedIndex(-1);
             stationComboStart.removeAllItems();
             stationComboEnd.removeAllItems();
+            stationComboStart.setEnabled(false);
+            stationComboEnd.setEnabled(false);
         });
 
         buttonPanel.add(clear);
