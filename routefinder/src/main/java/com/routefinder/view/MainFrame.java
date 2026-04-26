@@ -18,6 +18,7 @@ public class MainFrame extends JFrame {
         setTitle("โปรแกรมค้นหาเส้นทางรถไฟฟ้าไทย");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+        setResizable(false);
         setSize(920, 620);
         setLocationRelativeTo(null);
 
