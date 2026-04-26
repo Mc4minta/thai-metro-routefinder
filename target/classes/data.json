@@ -2,22 +2,22 @@
     "lines": [
         {
             "code": "PP",
-            "name_th": "สายสีม่วง",
+            "name_th": "MRT สายสีม่วง",
             "name_en": "MRT Purple Line"
         },
         {
             "code": "BL",
-            "name_th": "สายสีน้ำเงิน",
+            "name_th": "MRT สายสีน้ำเงิน",
             "name_en": "MRT Blue Line"
         },
         {
             "code": "PK",
-            "name_th": "สายสีชมพู",
+            "name_th": "MRT สายสีชมพู",
             "name_en": "MRT Pink Line"
         },
         {
             "code": "YL",
-            "name_th": "สายสีเหลือง",
+            "name_th": "MRT สายสีเหลือง",
             "name_en": "MRT Yellow Line"
         },
         {
@@ -27,17 +27,17 @@
         },
         {
             "code": "RN",
-            "name_th": "สายสีแดงเข้ม",
+            "name_th": "รถไฟฟ้าชานเมืองสายสีแดงเข้ม",
             "name_en": "SRT Dark Red Line"
         },
         {
             "code": "LG",
-            "name_th": "สายสุขุมวิท",
+            "name_th": "BTS สายสุขุมวิท",
             "name_en": "BTS Sukhumvit Line"
         },
         {
             "code": "DG",
-            "name_th": "สายสีลม",
+            "name_th": "BTS สายสีลม",
             "name_en": "BTS Silom Line"
         }
     ],
