@@ -2,416 +2,408 @@
     "lines": [
         {
             "code": "PP",
-            "name_th": "สายสีม่วง",
-            "name_en": "MRT Purple Line"
+            "name": "สายสีม่วง | MRT Purple Line"
         },
         {
             "code": "BL",
-            "name_th": "สายสีน้ำเงิน",
-            "name_en": "MRT Blue Line"
+            "name": "สายสีน้ำเงิน | MRT Blue Line"
         },
         {
             "code": "PK",
-            "name_th": "สายสีชมพู",
-            "name_en": "MRT Pink Line"
+            "name": "สายสีชมพู | MRT Pink Line"
         },
         {
             "code": "YL",
-            "name_th": "สายสีเหลือง",
-            "name_en": "MRT Yellow Line"
+            "name": "สายสีเหลือง | MRT Yellow Line"
         },
         {
             "code": "ARL",
-            "name_th": "แอร์พอร์ตเรลลิงก์",
-            "name_en": "Airport Rail Link"
+            "name": "แอร์พอร์ตเรลลิงก์ | Airport Rail Link"
         },
         {
             "code": "RN",
-            "name_th": "สายสีแดงเข้ม",
-            "name_en": "SRT Dark Red Line"
+            "name": "สายสีแดงเข้ม | SRT Dark Red Line"
         },
         {
             "code": "LG",
-            "name_th": "สายสุขุมวิท",
-            "name_en": "BTS Sukhumvit Line"
+            "name": "สายสุขุมวิท | BTS Sukhumvit Line"
         },
         {
             "code": "DG",
-            "name_th": "สายสีลม",
-            "name_en": "BTS Silom Line"
+            "name": "สายสีลม | BTS Silom Line"
         }
     ],
     "stations": [
         {
             "id": "PP01",
-            "name_th": "คลองบางไผ่",
-            "name_en": "Khlong Bang Phai",
+            "name": "คลองบางไผ่",
+            "englishname": "Khlong Bang Phai",
             "line": "PP"
         },
         {
             "id": "PP02",
-            "name_th": "ตลาดบางใหญ่",
-            "name_en": "Talad Bang Yai",
+            "name": "ตลาดบางใหญ่",
+            "englishname": "Talad Bang Yai",
             "line": "PP"
         },
         {
             "id": "PP03",
-            "name_th": "สามแยกบางใหญ่",
-            "name_en": "Sam Yaek Bang Yai",
+            "name": "สามแยกบางใหญ่",
+            "englishname": "Sam Yaek Bang Yai",
             "line": "PP"
         },
         {
             "id": "PP04",
-            "name_th": "บางพลู",
-            "name_en": "Bang Phlu",
+            "name": "บางพลู",
+            "englishname": "Bang Phlu",
             "line": "PP"
         },
         {
             "id": "PP05",
-            "name_th": "บางรักใหญ่",
-            "name_en": "Bang Rak Yai",
+            "name": "บางรักใหญ่",
+            "englishname": "Bang Rak Yai",
             "line": "PP"
         },
         {
             "id": "PP06",
-            "name_th": "บางรักน้อยท่าอิฐ",
-            "name_en": "Bang Rak Noi Tha It",
+            "name": "บางรักน้อยท่าอิฐ",
+            "englishname": "Bang Rak Noi Tha It",
             "line": "PP"
         },
         {
             "id": "PP07",
-            "name_th": "ไทรม้า",
-            "name_en": "Sai Ma",
+            "name": "ไทรม้า",
+            "englishname": "Sai Ma",
             "line": "PP"
         },
         {
             "id": "PP08",
-            "name_th": "สะพานพระนั่งเกล้า",
-            "name_en": "Phra Nang Klao Bridge",
+            "name": "สะพานพระนั่งเกล้า",
+            "englishname": "Phra Nang Klao Bridge",
             "line": "PP"
         },
         {
             "id": "PP09",
-            "name_th": "แยกนนทบุรี 1",
-            "name_en": "Yaek Nonthaburi 1",
+            "name": "แยกนนทบุรี 1",
+            "englishname": "Yaek Nonthaburi 1",
             "line": "PP"
         },
         {
             "id": "PP10",
-            "name_th": "บางกระสอ",
-            "name_en": "Bang Krasor",
+            "name": "บางกระสอ",
+            "englishname": "Bang Krasor",
             "line": "PP"
         },
         {
             "id": "PP11",
-            "name_th": "ศูนย์ราชการนนทบุรี",
-            "name_en": "Nonthaburi Civic Center",
+            "name": "ศูนย์ราชการนนทบุรี",
+            "englishname": "Nonthaburi Civic Center",
             "line": "PP"
         },
         {
             "id": "PP12",
-            "name_th": "กระทรวงสาธารณสุข",
-            "name_en": "Ministry of Public Health",
+            "name": "กระทรวงสาธารณสุข",
+            "englishname": "Ministry of Public Health",
             "line": "PP"
         },
         {
             "id": "PP13",
-            "name_th": "แยกติวานนท์",
-            "name_en": "Yaek Tiwanon",
+            "name": "แยกติวานนท์",
+            "englishname": "Yaek Tiwanon",
             "line": "PP"
         },
         {
             "id": "PP14",
-            "name_th": "วงศ์สว่าง",
-            "name_en": "Wong Sawang",
+            "name": "วงศ์สว่าง",
+            "englishname": "Wong Sawang",
             "line": "PP"
         },
         {
             "id": "PP15",
-            "name_th": "บางซ่อน",
-            "name_en": "Bang Son",
+            "name": "บางซ่อน",
+            "englishname": "Bang Son",
             "line": "PP"
         },
         {
             "id": "PP16",
-            "name_th": "เตาปูน",
-            "name_en": "Tao Poon",
+            "name": "เตาปูน",
+            "englishname": "Tao Poon",
             "line": "PP"
         },
         {
             "id": "A1",
-            "name_th": "สุวรรณภูมิ",
-            "name_en": "Suvarnabhumi",
+            "name": "สุวรรณภูมิ",
+            "englishname": "Suvarnabhumi",
             "line": "ARL"
         },
         {
             "id": "A2",
-            "name_th": "ลาดกระบัง",
-            "name_en": "Lat Krabang",
+            "name": "ลาดกระบัง",
+            "englishname": "Lat Krabang",
             "line": "ARL"
         },
         {
             "id": "A3",
-            "name_th": "บ้านทับช้าง",
-            "name_en": "Ban Thap Chang",
+            "name": "บ้านทับช้าง",
+            "englishname": "Ban Thap Chang",
             "line": "ARL"
         },
         {
             "id": "A4",
-            "name_th": "หัวหมาก",
-            "name_en": "Hua Mak",
+            "name": "หัวหมาก",
+            "englishname": "Hua Mak",
             "line": "ARL"
         },
         {
             "id": "A5",
-            "name_th": "รามคำแหง",
-            "name_en": "Ramkhamhaeng",
+            "name": "รามคำแหง",
+            "englishname": "Ramkhamhaeng",
             "line": "ARL"
         },
         {
             "id": "A6",
-            "name_th": "มักกะสัน",
-            "name_en": "Makkasan",
+            "name": "มักกะสัน",
+            "englishname": "Makkasan",
             "line": "ARL"
         },
         {
             "id": "A7",
-            "name_th": "ราชปรารภ",
-            "name_en": "Ratchaprarop",
+            "name": "ราชปรารภ",
+            "englishname": "Ratchaprarop",
             "line": "ARL"
         },
         {
             "id": "A8",
-            "name_th": "พญาไท",
-            "name_en": "Phaya Thai",
+            "name": "พญาไท",
+            "englishname": "Phaya Thai",
             "line": "ARL"
         },
         {
             "id": "RN01",
-            "name_th": "กรุงเทพอภิวัฒน์",
-            "name_en": "Krung Thep Aphiwat",
+            "name": "กรุงเทพอภิวัฒน์",
+            "englishname": "Krung Thep Aphiwat",
             "line": "RN"
         },
         {
             "id": "RN02",
-            "name_th": "จตุจักร",
-            "name_en": "Chatuchak",
+            "name": "จตุจักร",
+            "englishname": "Chatuchak",
             "line": "RN"
         },
         {
             "id": "RN03",
-            "name_th": "วัดเสมียนนารี",
-            "name_en": "Wat Samian Nari",
+            "name": "วัดเสมียนนารี",
+            "englishname": "Wat Samian Nari",
             "line": "RN"
         },
         {
             "id": "RN04",
-            "name_th": "บางเขน",
-            "name_en": "Bang Khen",
+            "name": "บางเขน",
+            "englishname": "Bang Khen",
             "line": "RN"
         },
         {
             "id": "RN05",
-            "name_th": "ทุ่งสองห้อง",
-            "name_en": "Thung Song Hong",
+            "name": "ทุ่งสองห้อง",
+            "englishname": "Thung Song Hong",
             "line": "RN"
         },
         {
             "id": "RN06",
-            "name_th": "หลักสี่",
-            "name_en": "Laksi",
+            "name": "หลักสี่",
+            "englishname": "Laksi",
             "line": "RN"
         },
         {
             "id": "RN07",
-            "name_th": "การเคหะ",
-            "name_en": "Kan Kheha",
+            "name": "การเคหะ",
+            "englishname": "Kan Kheha",
             "line": "RN"
         },
         {
             "id": "RN08",
-            "name_th": "ดอนเมือง",
-            "name_en": "Don Mueang",
+            "name": "ดอนเมือง",
+            "englishname": "Don Mueang",
             "line": "RN"
         },
         {
             "id": "RN09",
-            "name_th": "หลักหก",
-            "name_en": "Lak Hok",
+            "name": "หลักหก",
+            "englishname": "Lak Hok",
             "line": "RN"
         },
         {
             "id": "RN10",
-            "name_th": "รังสิต",
-            "name_en": "Rangsit",
+            "name": "รังสิต",
+            "englishname": "Rangsit",
             "line": "RN"
         },
         {
             "id": "BL01",
-            "name_th": "ท่าพระ",
-            "name_en": "Tha Phra",
+            "name": "ท่าพระ",
+            "englishname": "Tha Phra",
             "line": "BL"
         },
         {
             "id": "BL10",
-            "name_th": "เตาปูน",
-            "name_en": "Tao Poon",
+            "name": "เตาปูน",
+            "englishname": "Tao Poon",
             "line": "BL"
         },
         {
             "id": "BL11",
-            "name_th": "บางซื่อ",
-            "name_en": "Bang Sue",
+            "name": "บางซื่อ",
+            "englishname": "Bang Sue",
             "line": "BL"
         },
         {
             "id": "BL13",
-            "name_th": "สวนจตุจักร",
-            "name_en": "Chatuchak Park",
+            "name": "สวนจตุจักร",
+            "englishname": "Chatuchak Park",
             "line": "BL"
         },
         {
             "id": "BL14",
-            "name_th": "พหลโยธิน",
-            "name_en": "Phahon Yothin",
+            "name": "พหลโยธิน",
+            "englishname": "Phahon Yothin",
             "line": "BL"
         },
         {
             "id": "BL15",
-            "name_th": "ลาดพร้าว",
-            "name_en": "Lat Phrao",
+            "name": "ลาดพร้าว",
+            "englishname": "Lat Phrao",
             "line": "BL"
         },
         {
             "id": "BL21",
-            "name_th": "เพชรบุรี",
-            "name_en": "Phetchaburi",
+            "name": "เพชรบุรี",
+            "englishname": "Phetchaburi",
             "line": "BL"
         },
         {
             "id": "BL22",
-            "name_th": "สุขุมวิท",
-            "name_en": "Sukhumvit",
+            "name": "สุขุมวิท",
+            "englishname": "Sukhumvit",
             "line": "BL"
         },
         {
             "id": "BL26",
-            "name_th": "สีลม",
-            "name_en": "Si Lom",
+            "name": "สีลม",
+            "englishname": "Si Lom",
             "line": "BL"
         },
         {
             "id": "BL34",
-            "name_th": "บางหว้า",
-            "name_en": "Bang Wa",
+            "name": "บางหว้า",
+            "englishname": "Bang Wa",
             "line": "BL"
         },
         {
             "id": "BL38",
-            "name_th": "หลักสอง",
-            "name_en": "Lak Song",
+            "name": "หลักสอง",
+            "englishname": "Lak Song",
             "line": "BL"
         },
         {
             "id": "PK01",
-            "name_th": "ศูนย์ราชการนนทบุรี",
-            "name_en": "Nonthaburi Civic Center",
+            "name": "ศูนย์ราชการนนทบุรี",
+            "englishname": "Nonthaburi Civic Center",
             "line": "PK"
         },
         {
             "id": "PK14",
-            "name_th": "หลักสี่",
-            "name_en": "Laksi",
+            "name": "หลักสี่",
+            "englishname": "Laksi",
             "line": "PK"
         },
         {
             "id": "PK16",
-            "name_th": "วัดพระศรีมหาธาตุ",
-            "name_en": "Wat Phra Sri Mahathat",
+            "name": "วัดพระศรีมหาธาตุ",
+            "englishname": "Wat Phra Sri Mahathat",
             "line": "PK"
         },
         {
             "id": "PK30",
-            "name_th": "มีนบุรี",
-            "name_en": "Min Buri",
+            "name": "มีนบุรี",
+            "englishname": "Min Buri",
             "line": "PK"
         },
         {
             "id": "YL01",
-            "name_th": "ลาดพร้าว",
-            "name_en": "Lat Phrao",
+            "name": "ลาดพร้าว",
+            "englishname": "Lat Phrao",
             "line": "YL"
         },
         {
             "id": "YL11",
-            "name_th": "หัวหมาก",
-            "name_en": "Hua Mak",
+            "name": "หัวหมาก",
+            "englishname": "Hua Mak",
             "line": "YL"
         },
         {
             "id": "YL23",
-            "name_th": "สำโรง",
-            "name_en": "Samrong",
+            "name": "สำโรง",
+            "englishname": "Samrong",
             "line": "YL"
         },
         {
             "id": "N2",
-            "name_th": "พญาไท",
-            "name_en": "Phaya Thai",
+            "name": "พญาไท",
+            "englishname": "Phaya Thai",
             "line": "LG"
         },
         {
             "id": "N8",
-            "name_th": "หมอชิต",
-            "name_en": "Mo Chit",
+            "name": "หมอชิต",
+            "englishname": "Mo Chit",
             "line": "LG"
         },
         {
             "id": "N9",
-            "name_th": "ห้าแยกลาดพร้าว",
-            "name_en": "Ha Yaek Lat Phrao",
+            "name": "ห้าแยกลาดพร้าว",
+            "englishname": "Ha Yaek Lat Phrao",
             "line": "LG"
         },
         {
             "id": "N17",
-            "name_th": "วัดพระศรีมหาธาตุ",
-            "name_en": "Wat Phra Sri Mahathat",
+            "name": "วัดพระศรีมหาธาตุ",
+            "englishname": "Wat Phra Sri Mahathat",
             "line": "LG"
         },
         {
             "id": "CEN_LG",
-            "name_th": "สยาม",
-            "name_en": "Siam",
+            "name": "สยาม",
+            "englishname": "Siam",
             "line": "LG"
         },
         {
             "id": "E4",
-            "name_th": "อโศก",
-            "name_en": "Asok",
+            "name": "อโศก",
+            "englishname": "Asok",
             "line": "LG"
         },
         {
             "id": "E15",
-            "name_th": "สำโรง",
-            "name_en": "Samrong",
+            "name": "สำโรง",
+            "englishname": "Samrong",
             "line": "LG"
         },
         {
             "id": "CEN_DG",
-            "name_th": "สยาม",
-            "name_en": "Siam",
+            "name": "สยาม",
+            "englishname": "Siam",
             "line": "DG"
         },
         {
             "id": "S2",
-            "name_th": "ศาลาแดง",
-            "name_en": "Sala Daeng",
+            "name": "ศาลาแดง",
+            "englishname": "Sala Daeng",
             "line": "DG"
         },
         {
             "id": "S12",
-            "name_th": "บางหว้า",
-            "name_en": "Bang Wa",
+            "name": "บางหว้า",
+            "englishname": "Bang Wa",
             "line": "DG"
         }
     ],

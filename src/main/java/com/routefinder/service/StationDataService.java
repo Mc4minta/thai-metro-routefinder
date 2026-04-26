@@ -16,21 +16,22 @@ public class StationDataService {
 
     private List<Line> lines = new ArrayList<>();
     private List<Station> stations = new ArrayList<>();
+    private final String dataSource = "/data.json";
 
     public StationDataService() {
         loadData();
     }
 
     private void loadData() {
-        try (Reader reader = new InputStreamReader(getClass().getResourceAsStream("/data.json"))) {
+        try (Reader reader = new InputStreamReader(getClass().getResourceAsStream(dataSource))) {
             Gson gson = new Gson();
             JsonObject data = gson.fromJson(reader, JsonObject.class);
-            
+
             JsonArray linesArray = data.getAsJsonArray("lines");
             for (JsonElement element : linesArray) {
                 lines.add(gson.fromJson(element, Line.class));
             }
-            
+
             JsonArray stationsArray = data.getAsJsonArray("stations");
             for (JsonElement element : stationsArray) {
                 stations.add(gson.fromJson(element, Station.class));
