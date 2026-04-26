@@ -18,21 +18,23 @@ public class ResultPanel extends JPanel {
         setBackground(new Color(236, 240, 245));
 
         // ================= HEADER =================
-        JLabel title = new JLabel("Route Result", SwingConstants.CENTER);
-        title.setFont(new Font("Segoe UI", Font.BOLD, 22));
+        // JLabel title = new JLabel("Route Result", SwingConstants.CENTER);
+        JLabel title = new JLabel("ผลลัพธ์การคำนวณ", SwingConstants.CENTER);
+        title.setFont(new Font("Tahoma", Font.BOLD, 22));
         title.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
 
         add(title, BorderLayout.NORTH);
 
         // ================= TABLE =================
-        String[] columns = {"Start Station", "End Station", "Line", "Fare"};
+        // String[] columns = { "Start Station", "End Station", "Line", "Fare" };
+        String[] columns = { "สถานีต้นทาง", "สถานีปลายทาง", "สาย", "ราคา" };
 
         DefaultTableModel model = new DefaultTableModel(columns, 0);
         table = new JTable(model);
 
-        table.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        table.setFont(new Font("Tahoma", Font.PLAIN, 13));
         table.setRowHeight(28);
-        table.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 13));
+        table.getTableHeader().setFont(new Font("Tahoma", Font.BOLD, 13));
 
         JScrollPane scrollPane = new JScrollPane(table);
         scrollPane.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
@@ -43,12 +45,14 @@ public class ResultPanel extends JPanel {
         JPanel bottom = new JPanel(new BorderLayout());
         bottom.setBackground(new Color(236, 240, 245));
 
-        totalFareLabel = new JLabel("Total Fare: ฿0.00", SwingConstants.CENTER);
-        totalFareLabel.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        // totalFareLabel = new JLabel("Total Fare: ฿0.00", SwingConstants.CENTER);
+        totalFareLabel = new JLabel("ราคารวม: ฿0.00", SwingConstants.CENTER);
+        totalFareLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
         totalFareLabel.setForeground(new Color(39, 174, 96));
         totalFareLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        JButton back = new JButton("Back");
+        // JButton back = new JButton("Back");
+        JButton back = new JButton("ย้อนกลับ");
         styleButton(back);
         back.addActionListener(e -> controller.onBackToInput());
 
@@ -72,14 +76,15 @@ public class ResultPanel extends JPanel {
             model.addRow(row);
         }
 
-        totalFareLabel.setText(String.format("Total Fare: ฿%.2f", totalFare));
+        // totalFareLabel.setText(String.format("Total Fare: ฿%.2f", totalFare));
+        totalFareLabel.setText(String.format("ราคารวม: ฿%.2f", totalFare));
     }
 
     private void styleButton(JButton btn) {
         btn.setBackground(new Color(231, 76, 60));
         btn.setForeground(Color.WHITE);
         btn.setFocusPainted(false);
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        btn.setFont(new Font("Tahoma", Font.BOLD, 14));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
 }

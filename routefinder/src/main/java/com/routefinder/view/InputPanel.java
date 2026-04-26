@@ -25,11 +25,11 @@ public class InputPanel extends JPanel {
         gbc.insets = new Insets(12, 20, 12, 20);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JLabel thaiTitle = new JLabel("โปรแกรมคำนวณราคารถไฟฟ้าไทย");
+        JLabel thaiTitle = new JLabel("โปรแกรมค้นหาเส้นทางรถไฟฟ้าไทย");
         thaiTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
         thaiTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel engTitle = new JLabel("Thai Mass Transit Fare Calculator");
+        JLabel engTitle = new JLabel("Thai Mass Transit Fare Route Finder");
         engTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
         engTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -62,7 +62,8 @@ public class InputPanel extends JPanel {
         // ================= START LINE =================
         gbc.gridy++;
         gbc.gridx = 0;
-        add(label("Starting Line:"), gbc);
+        // add(label("Starting Line:"), gbc);
+        add(label("สายต้นทาง:"), gbc);
 
         gbc.gridx = 1;
         lineComboStart = new JComboBox<>();
@@ -75,7 +76,8 @@ public class InputPanel extends JPanel {
         // ================= START STATION =================
         gbc.gridy++;
         gbc.gridx = 0;
-        add(label("Starting Station:"), gbc);
+        // add(label("Starting Station:"), gbc);
+        add(label("สถานีต้นทาง:"), gbc);
 
         gbc.gridx = 1;
         stationComboStart = new JComboBox<>();
@@ -85,7 +87,8 @@ public class InputPanel extends JPanel {
         // ================= END LINE =================
         gbc.gridy++;
         gbc.gridx = 0;
-        add(label("Destination Line:"), gbc);
+        // add(label("Destination Line:"), gbc);
+        add(label("สายปลายทาง:"), gbc);
 
         gbc.gridx = 1;
         lineComboEnd = new JComboBox<>();
@@ -98,7 +101,8 @@ public class InputPanel extends JPanel {
         // ================= END STATION =================
         gbc.gridy++;
         gbc.gridx = 0;
-        add(label("Destination Station:"), gbc);
+        // add(label("Destination Station:"), gbc);
+        add(label("สถานีปลายทาง:"), gbc);
 
         gbc.gridx = 1;
         stationComboEnd = new JComboBox<>();
@@ -121,7 +125,7 @@ public class InputPanel extends JPanel {
         // Initialize stations empty
         lineComboStart.setSelectedIndex(-1);
         lineComboEnd.setSelectedIndex(-1);
-        
+
         // ================= BUTTONS =================
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setBackground(new Color(245, 247, 250));
@@ -153,13 +157,13 @@ public class InputPanel extends JPanel {
 
     private JLabel label(String text) {
         JLabel l = new JLabel(text);
-        l.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        l.setFont(new Font("Tahoma", Font.PLAIN, 14));
         l.setForeground(new Color(60, 60, 60));
         return l;
     }
 
     private void styleCombo(JComboBox<?> box, String hint) {
-        box.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        box.setFont(new Font("Tahoma", Font.PLAIN, 14));
         box.setBackground(Color.WHITE);
         box.setPreferredSize(new Dimension(320, 35));
 
@@ -192,7 +196,7 @@ public class InputPanel extends JPanel {
         btn.setBackground(bg);
         btn.setForeground(fg);
         btn.setFocusPainted(false);
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        btn.setFont(new Font("Tahoma", Font.BOLD, 13));
         btn.setPreferredSize(new Dimension(140, 40));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
     }
