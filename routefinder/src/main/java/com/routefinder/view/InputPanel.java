@@ -29,27 +29,27 @@ public class InputPanel extends JPanel {
         thaiTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
         thaiTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel engTitle = new JLabel("Thai Mass Transit Fare Route Finder");
-        engTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
-        engTitle.setHorizontalAlignment(SwingConstants.CENTER);
+        // JLabel engTitle = new JLabel("Thai Mass Transit Fare Route Finder");
+        // engTitle.setFont(new Font("Tahoma", Font.BOLD, 26));
+        // engTitle.setHorizontalAlignment(SwingConstants.CENTER);
 
         // ================= TITLE (THAI) =================
         GridBagConstraints titleThai = (GridBagConstraints) gbc.clone();
         titleThai.gridx = 0;
         titleThai.gridy = 0;
         titleThai.gridwidth = 2;
-        titleThai.insets = new Insets(25, 20, 5, 20);
+        // titleThai.insets = new Insets(25, 20, 5, 20);
 
         add(thaiTitle, titleThai);
 
-        // ================= TITLE (ENGLISH) =================
-        GridBagConstraints titleEng = (GridBagConstraints) gbc.clone();
-        titleEng.gridx = 0;
-        titleEng.gridy = 1;
-        titleEng.gridwidth = 2;
-        titleEng.insets = new Insets(0, 20, 30, 20);
+        // // ================= TITLE (ENGLISH) =================
+        // GridBagConstraints titleEng = (GridBagConstraints) gbc.clone();
+        // titleEng.gridx = 0;
+        // titleEng.gridy = 1;
+        // titleEng.gridwidth = 2;
+        // titleEng.insets = new Insets(0, 20, 30, 20);
 
-        add(engTitle, titleEng);
+        // add(engTitle, titleEng);
 
         // RESET for form section
         gbc = new GridBagConstraints();
@@ -130,8 +130,10 @@ public class InputPanel extends JPanel {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
         buttonPanel.setBackground(new Color(245, 247, 250));
 
-        JButton clear = new JButton("Clear");
-        JButton calc = new JButton("Calculate");
+        // JButton clear = new JButton("Clear");
+        JButton clear = new JButton("ล้างค่า");
+        // JButton calc = new JButton("Find Route");
+        JButton calc = new JButton("ค้นหาเส้นทาง");
 
         styleButton(clear, new Color(200, 200, 200), Color.BLACK);
         styleButton(calc, new Color(41, 128, 185), Color.WHITE);

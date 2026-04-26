@@ -2,35 +2,35 @@
     "lines": [
         {
             "code": "PP",
-            "name": "MRT Purple Line"
+            "name": "สายสีม่วง | MRT Purple Line"
         },
         {
             "code": "BL",
-            "name": "MRT Blue Line"
+            "name": "สายสีน้ำเงิน | MRT Blue Line"
         },
         {
             "code": "PK",
-            "name": "MRT Pink Line"
+            "name": "สายสีชมพู | MRT Pink Line"
         },
         {
             "code": "YL",
-            "name": "MRT Yellow Line"
+            "name": "สายสีเหลือง | MRT Yellow Line"
         },
         {
             "code": "ARL",
-            "name": "SRT Airport Rail Link"
+            "name": "แอร์พอร์ตเรลลิงก์ | Airport Rail Link"
         },
         {
             "code": "RN",
-            "name": "SRT Dark Red Line"
+            "name": "สายสีแดงเข้ม | SRT Dark Red Line"
         },
         {
             "code": "LG",
-            "name": "BTS Light Green Line"
+            "name": "สายสุขุมวิท | BTS Sukhumvit Line"
         },
         {
             "code": "DG",
-            "name": "BTS Dark Green Line"
+            "name": "สายสีลม | BTS Silom Line"
         }
     ],
     "stations": [
