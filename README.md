@@ -28,5 +28,9 @@ This project is licensed under the MIT License.
 ## To run
 
 ```powershell
+mvn install
+```
+
+```powershell
 mvn compile exec:java "-Dexec.mainClass=com.routefinder.MainApplication"
 ```
