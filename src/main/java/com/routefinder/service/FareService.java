@@ -26,7 +26,7 @@ public class FareService {
     }
 
     private void loadData() {
-        try (Reader reader = new InputStreamReader(getClass().getResourceAsStream("/data-fare-discount.json"))) {
+        try (Reader reader = new InputStreamReader(getClass().getResourceAsStream("/data.json"))) {
             Gson gson = new Gson();
             JsonObject data = gson.fromJson(reader, JsonObject.class);
 
@@ -48,7 +48,7 @@ public class FareService {
                     String fromId = obj.get("from").getAsString();
                     String toId = obj.get("to").getAsString();
                     String lineCode = obj.get("line").getAsString();
-                    
+
                     Node u = new Node(fromId, lineCode);
                     Node v = new Node(toId, lineCode);
                     adj.computeIfAbsent(u, k -> new ArrayList<>()).add(new Edge(v, price, false));
@@ -57,7 +57,7 @@ public class FareService {
                     String fromLine = obj.get("from_line").getAsString();
                     String toId = obj.get("to").getAsString();
                     String toLine = obj.get("to_line").getAsString();
-                    
+
                     Node u = new Node(fromId, fromLine);
                     Node v = new Node(toId, toLine);
                     adj.computeIfAbsent(u, k -> new ArrayList<>()).add(new Edge(v, 0.0, true));
@@ -87,13 +87,14 @@ public class FareService {
         Map<Node, Map<Boolean, Double>> dist = new HashMap<>();
 
         pq.add(new State(startNode, 0.0, false, null, null));
-        
+
         State bestGoal = null;
 
         while (!pq.isEmpty()) {
             State curr = pq.poll();
 
-            if (curr.cost > dist.getOrDefault(curr.node, Collections.emptyMap()).getOrDefault(curr.afterInterchange, Double.MAX_VALUE)) {
+            if (curr.cost > dist.getOrDefault(curr.node, Collections.emptyMap()).getOrDefault(curr.afterInterchange,
+                    Double.MAX_VALUE)) {
                 continue;
             }
 
@@ -101,7 +102,8 @@ public class FareService {
                 if (bestGoal == null || curr.cost < bestGoal.cost) {
                     bestGoal = curr;
                 }
-                // Continue to find potentially better paths if needed, but Dijkstra usually finds min cost first
+                // Continue to find potentially better paths if needed, but Dijkstra usually
+                // finds min cost first
             }
 
             List<Edge> neighbors = adj.getOrDefault(curr.node, Collections.emptyList());
@@ -124,11 +126,10 @@ public class FareService {
                 if (newCost < nodeDists.getOrDefault(nextAfterInterchange, Double.MAX_VALUE)) {
                     nodeDists.put(nextAfterInterchange, newCost);
                     pq.add(new State(e.to, newCost, nextAfterInterchange, curr, new PathEdge(
-                            getStation(curr.node), 
-                            getStation(e.to), 
-                            e.to.lineCode, 
-                            travelCost
-                    )));
+                            getStation(curr.node),
+                            getStation(e.to),
+                            e.to.lineCode,
+                            travelCost)));
                 }
             }
         }
@@ -162,8 +163,10 @@ public class FareService {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof Node)) return false;
+            if (this == o)
+                return true;
+            if (!(o instanceof Node))
+                return false;
             Node node = (Node) o;
             return Objects.equals(stationId, node.stationId) && Objects.equals(lineCode, node.lineCode);
         }
