@@ -3,6 +3,7 @@
 package com.routefinder;
 
 import com.routefinder.controller.RouteController;
+import com.routefinder.service.FareService;
 import com.routefinder.service.StationDataService;
 import com.routefinder.view.MainFrame;
 
@@ -14,7 +15,8 @@ public class MainApplication {
         SwingUtilities.invokeLater(() -> {
             // MVC Initialization
             StationDataService dataService = new StationDataService();
-            RouteController controller = new RouteController(dataService);
+            FareService fareService = new FareService();
+            RouteController controller = new RouteController(dataService, fareService);
             MainFrame mainFrame = new MainFrame(controller);
 
             // Link controller to view

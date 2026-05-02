@@ -3,6 +3,7 @@ package com.routefinder.controller;
 import com.routefinder.model.Line;
 import com.routefinder.model.PathEdge;
 import com.routefinder.model.Station;
+import com.routefinder.service.FareService;
 import com.routefinder.service.StationDataService;
 import com.routefinder.view.MainFrame;
 
@@ -12,10 +13,12 @@ import java.util.List;
 public class RouteController {
 
     private final StationDataService dataService;
+    private final FareService fareService;
     private MainFrame mainFrame;
 
-    public RouteController(StationDataService dataService) {
+    public RouteController(StationDataService dataService, FareService fareService) {
         this.dataService = dataService;
+        this.fareService = fareService;
     }
 
     public void setMainFrame(MainFrame mainFrame) {
@@ -34,8 +37,8 @@ public class RouteController {
         if (start == null || end == null)
             return;
 
-        // Mock Dijkstra result
-        List<PathEdge> path = mockCalculate(start, end);
+        // Use real Dijkstra result from FareService
+        List<PathEdge> path = fareService.calculateRoute(start, end);
 
         // Group edges for UI display
         List<Object[]> rows = formatForUI(path);
@@ -52,38 +55,6 @@ public class RouteController {
         }
     }
 
-    private List<PathEdge> mockCalculate(Station start, Station end) {
-        List<PathEdge> path = new ArrayList<>();
-
-        // If same line, just mock a direct trip
-        if (start.line.equals(end.line)) {
-            path.add(new PathEdge(start, end, start.line, 25.0));
-        } else {
-            // Mock a transfer
-            // 1. From start to some junction station on same line
-            Station junctionStart = new Station();
-            junctionStart.id = "JUNCTION";
-            junctionStart.name_th = "สถานีเชื่อมต่อ (" + start.line + ")";
-            junctionStart.name_en = "Transfer Station (" + start.line + ")";
-            junctionStart.line = start.line;
-
-            path.add(new PathEdge(start, junctionStart, start.line, 15.0));
-
-            // 2. Transfer edge (0 cost)
-            Station junctionEnd = new Station();
-            junctionEnd.id = "JUNCTION";
-            junctionEnd.name_th = "สถานีเชื่อมต่อ (" + end.line + ")";
-            junctionEnd.name_en = "Transfer Station (" + end.line + ")";
-            junctionEnd.line = end.line;
-
-            path.add(new PathEdge(junctionStart, junctionEnd, end.line, 0.0));
-
-            // 3. From junction to destination
-            path.add(new PathEdge(junctionEnd, end, end.line, 10.0));
-        }
-
-        return path;
-    }
 
     private List<Object[]> formatForUI(List<PathEdge> path) {
         List<Object[]> rows = new ArrayList<>();
