@@ -1,6 +1,6 @@
 # implementation plan for 3 May 2026
 
-## 1. Data source 
+## 1. Data source
 
 - change the data use from data-fare-discount.json to data.json
 - and then edit the data.json
