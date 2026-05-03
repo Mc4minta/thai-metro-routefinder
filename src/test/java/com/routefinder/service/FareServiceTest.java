@@ -77,7 +77,126 @@ public class FareServiceTest {
         List<PathEdge> route = fareService.calculateRoute(start, end);
 
         assertNotNull(route);
-        assertEquals(1, route.size(), "Should just be the interchange edge");
-        assertEquals(0.0, route.get(0).cost, 0.01, "Interchange within same station should be free");
+        assertEquals(1, route.size(), "Should return the entry/exit fare self-edge");
+        assertEquals(17.0, route.get(0).cost, 0.01, "Entry/exit fare for Siam should apply");
+    }
+
+    @Test
+    public void testSingleLineFare() {
+        // PP01 -> PP16 = 42.0
+        Station start = new Station();
+        start.id = "PP01";
+        start.line = "PP";
+
+        Station end = new Station();
+        end.id = "PP16";
+        end.line = "PP";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertEquals(42.0, totalCost, 0.01);
+    }
+
+    @Test
+    public void testDiscountAfterInterchange() {
+        // PP16(PP) -> BL11(BL)
+        Station start = new Station();
+        start.id = "PP16";
+        start.line = "PP";
+
+        Station end = new Station();
+        end.id = "BL11";
+        end.line = "BL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertTrue(route.size() >= 2);
+        
+        boolean hasInterchange = route.stream().anyMatch(e -> e.cost == 0.0);
+        assertTrue(hasInterchange, "Should contain an interchange edge");
+
+        // The exact fare structure might depend on the JSON, but we verify it's a valid route and discounted.
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertTrue(totalCost < (14.0 + 17.0)); // Should be strictly less than full fares combined
+    }
+
+    @Test
+    public void testLongSingleLineBlue() {
+        // BL01 -> BL38
+        Station start = new Station();
+        start.id = "BL01";
+        start.line = "BL";
+
+        Station end = new Station();
+        end.id = "BL38";
+        end.line = "BL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertEquals(30.0, totalCost, 0.01); // 30.0 is the BL max in data
+    }
+
+    @Test
+    public void testSameStationDifferentLineLatPhrao() {
+        // BL15 -> YL01 (Lat Phrao)
+        Station start = new Station();
+        start.id = "BL15";
+        start.line = "BL";
+
+        Station end = new Station();
+        end.id = "YL01";
+        end.line = "YL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertEquals(1, route.size());
+        assertEquals(17.0, route.get(0).cost, 0.01, "Should apply same-station entry/exit fare");
+    }
+
+    @Test
+    public void testSameStationSameLine() {
+        // PP16 -> PP16
+        Station start = new Station();
+        start.id = "PP16";
+        start.line = "PP";
+
+        Station end = new Station();
+        end.id = "PP16";
+        end.line = "PP";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertEquals(1, route.size());
+        assertEquals(16.0, route.get(0).cost, 0.01); // 16.0 based on PP CSV self edge
+    }
+
+
+
+    @Test
+    public void testFixedPinkLineData() {
+        // PK19 -> PK20 (Should work now since we patched the data)
+        Station start = new Station();
+        start.id = "PK19";
+        start.line = "PK";
+
+        Station end = new Station();
+        end.id = "PK20";
+        end.line = "PK";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertEquals(17.0, totalCost, 0.01);
     }
 }

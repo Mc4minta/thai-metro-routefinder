@@ -51,4 +51,9 @@ public class MainFrame extends JFrame {
     public void setResult(java.util.List<Object[]> rows, double totalFare) {
         resultPanel.setResult(rows, totalFare);
     }
+
+    public void showNoRoute() {
+        resultPanel.showNoRoute();
+        showResult();
+    }
 }

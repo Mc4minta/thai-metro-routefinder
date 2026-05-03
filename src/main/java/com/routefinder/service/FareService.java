@@ -86,6 +86,25 @@ public class FareService {
         PriorityQueue<State> pq = new PriorityQueue<>(Comparator.comparingDouble(s -> s.cost));
         Map<Node, Map<Boolean, Double>> dist = new HashMap<>();
 
+        Station fullStart = getStation(startNode);
+        Station fullEnd = getStation(endId);
+
+        // 1. Same-station logic: if start and end are exactly the same physical station (same name)
+        // Check for self-edge (e.g. PP01 -> PP01) to return the minimum entry/exit fare.
+        if (fullStart != null && fullEnd != null && fullStart.name_en.equals(fullEnd.name_en)) {
+            List<Edge> neighbors = adj.getOrDefault(startNode, Collections.emptyList());
+            for (Edge e : neighbors) {
+                if (e.to.equals(startNode) && !e.isInterchange) {
+                    PathEdge selfEdge = new PathEdge(
+                            fullStart,
+                            fullEnd,
+                            fullStart.line,
+                            e.weight);
+                    return Collections.singletonList(selfEdge);
+                }
+            }
+        }
+
         pq.add(new State(startNode, 0.0, false, null, null));
 
         State bestGoal = null;
@@ -98,7 +117,7 @@ public class FareService {
                 continue;
             }
 
-            if (curr.node.stationId.equals(end.id)) {
+            if (curr.node.equals(endId)) {
                 if (bestGoal == null || curr.cost < bestGoal.cost) {
                     bestGoal = curr;
                 }

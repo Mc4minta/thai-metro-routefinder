@@ -40,16 +40,21 @@ public class RouteController {
         // Use real Dijkstra result from FareService
         List<PathEdge> path = fareService.calculateRoute(start, end);
 
-        // Group edges for UI display
-        List<Object[]> rows = formatForUI(path);
-
-        // Calculate total fare from raw path edges
-        double totalFare = 0;
-        for (PathEdge edge : path) {
-            totalFare += edge.cost;
-        }
-
         if (mainFrame != null) {
+            if (path == null || path.isEmpty()) {
+                mainFrame.showNoRoute();
+                return;
+            }
+
+            // Group edges for UI display
+            List<Object[]> rows = formatForUI(path);
+
+            // Calculate total fare from raw path edges
+            double totalFare = 0;
+            for (PathEdge edge : path) {
+                totalFare += edge.cost;
+            }
+
             mainFrame.setResult(rows, totalFare);
             mainFrame.showResult();
         }

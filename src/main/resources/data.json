@@ -40104,6 +40104,1203 @@
             "to_line": "BL",
             "type": "interchange",
             "price": 0.0
+        },
+        {
+            "from": "PK19",
+            "to": "PK01",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK02",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK03",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK04",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK05",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK06",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK07",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK08",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK09",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK10",
+            "line": "PK",
+            "price": 40.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK11",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK12",
+            "line": "PK",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK13",
+            "line": "PK",
+            "price": 31.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK14",
+            "line": "PK",
+            "price": 31.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK15",
+            "line": "PK",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK16",
+            "line": "PK",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK17",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK18",
+            "line": "PK",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK19",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK20",
+            "line": "PK",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK21",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK22",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK23",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK24",
+            "line": "PK",
+            "price": 28.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK25",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK26",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK27",
+            "line": "PK",
+            "price": 38.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK28",
+            "line": "PK",
+            "price": 41.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK29",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK19",
+            "to": "PK30",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK01",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK02",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK03",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK04",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK05",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK06",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK07",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK08",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK09",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK10",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK11",
+            "line": "PK",
+            "price": 44.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK12",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK13",
+            "line": "PK",
+            "price": 40.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK14",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK15",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK16",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK17",
+            "line": "PK",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK18",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK19",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK20",
+            "line": "PK",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK21",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK22",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK23",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK24",
+            "line": "PK",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK25",
+            "line": "PK",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK26",
+            "line": "PK",
+            "price": 28.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK27",
+            "line": "PK",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK28",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK29",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK22",
+            "to": "PK30",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK01",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK02",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK03",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK04",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK05",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK06",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK07",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK08",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK09",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK10",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK11",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK12",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK13",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK14",
+            "line": "PK",
+            "price": 43.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK15",
+            "line": "PK",
+            "price": 41.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK16",
+            "line": "PK",
+            "price": 39.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK17",
+            "line": "PK",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK18",
+            "line": "PK",
+            "price": 30.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK19",
+            "line": "PK",
+            "price": 28.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK20",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK21",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK22",
+            "line": "PK",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK23",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK24",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK25",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK26",
+            "line": "PK",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK27",
+            "line": "PK",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK28",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK29",
+            "line": "PK",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK24",
+            "to": "PK30",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK01",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK01",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK01",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK02",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK02",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK02",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK03",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK03",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK03",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK04",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK04",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK04",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK05",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK05",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK05",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK06",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK06",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK06",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK07",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK07",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK07",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK08",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK08",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK08",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK09",
+            "to": "PK19",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK09",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK09",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK10",
+            "to": "PK19",
+            "line": "PK",
+            "price": 40.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK10",
+            "to": "PK22",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK10",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK11",
+            "to": "PK19",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK11",
+            "to": "PK22",
+            "line": "PK",
+            "price": 44.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK11",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK12",
+            "to": "PK19",
+            "line": "PK",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK12",
+            "to": "PK22",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK12",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK13",
+            "to": "PK19",
+            "line": "PK",
+            "price": 31.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK13",
+            "to": "PK22",
+            "line": "PK",
+            "price": 40.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK13",
+            "to": "PK24",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK14",
+            "to": "PK19",
+            "line": "PK",
+            "price": 31.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK14",
+            "to": "PK22",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK14",
+            "to": "PK24",
+            "line": "PK",
+            "price": 43.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK15",
+            "to": "PK19",
+            "line": "PK",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK15",
+            "to": "PK22",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK15",
+            "to": "PK24",
+            "line": "PK",
+            "price": 41.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK16",
+            "to": "PK19",
+            "line": "PK",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK16",
+            "to": "PK22",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK16",
+            "to": "PK24",
+            "line": "PK",
+            "price": 39.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK17",
+            "to": "PK19",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK17",
+            "to": "PK22",
+            "line": "PK",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK17",
+            "to": "PK24",
+            "line": "PK",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK18",
+            "to": "PK19",
+            "line": "PK",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK18",
+            "to": "PK22",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK18",
+            "to": "PK24",
+            "line": "PK",
+            "price": 30.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK20",
+            "to": "PK19",
+            "line": "PK",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK20",
+            "to": "PK22",
+            "line": "PK",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK20",
+            "to": "PK24",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK21",
+            "to": "PK19",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK21",
+            "to": "PK22",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK21",
+            "to": "PK24",
+            "line": "PK",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK23",
+            "to": "PK19",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK23",
+            "to": "PK22",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK23",
+            "to": "PK24",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK25",
+            "to": "PK19",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK25",
+            "to": "PK22",
+            "line": "PK",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK25",
+            "to": "PK24",
+            "line": "PK",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK26",
+            "to": "PK19",
+            "line": "PK",
+            "price": 37.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK26",
+            "to": "PK22",
+            "line": "PK",
+            "price": 28.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK26",
+            "to": "PK24",
+            "line": "PK",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK27",
+            "to": "PK19",
+            "line": "PK",
+            "price": 38.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK27",
+            "to": "PK22",
+            "line": "PK",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK27",
+            "to": "PK24",
+            "line": "PK",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK28",
+            "to": "PK19",
+            "line": "PK",
+            "price": 41.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK28",
+            "to": "PK22",
+            "line": "PK",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK28",
+            "to": "PK24",
+            "line": "PK",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK29",
+            "to": "PK19",
+            "line": "PK",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK29",
+            "to": "PK22",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK29",
+            "to": "PK24",
+            "line": "PK",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK30",
+            "to": "PK19",
+            "line": "PK",
+            "price": 45.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK30",
+            "to": "PK22",
+            "line": "PK",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "PK30",
+            "to": "PK24",
+            "line": "PK",
+            "price": 25.0,
+            "type": "fare"
         }
     ],
     "discounts": {

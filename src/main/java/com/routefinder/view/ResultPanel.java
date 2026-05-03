@@ -117,6 +117,50 @@ public class ResultPanel extends JPanel {
         routeContainer.repaint();
     }
 
+    public void showNoRoute() {
+        routeContainer.removeAll();
+        subtitleLabel.setText("");
+
+        JPanel errorPanel = new JPanel();
+        errorPanel.setLayout(new BoxLayout(errorPanel, BoxLayout.Y_AXIS));
+        errorPanel.setBackground(Color.WHITE);
+        errorPanel.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createLineBorder(new Color(231, 76, 60), 2, true),
+                BorderFactory.createEmptyBorder(30, 30, 30, 30)));
+
+        JLabel iconLabel = new JLabel("⚠", SwingConstants.CENTER);
+        iconLabel.setFont(new Font("Tahoma", Font.BOLD, 48));
+        iconLabel.setForeground(new Color(231, 76, 60));
+        iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JLabel errorMsg = new JLabel("ไม่พบเส้นทาง", SwingConstants.CENTER);
+        errorMsg.setFont(new Font("Tahoma", Font.BOLD, 20));
+        errorMsg.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JLabel subErrorMsg = new JLabel("No route found between the selected stations.", SwingConstants.CENTER);
+        subErrorMsg.setFont(new Font("Tahoma", Font.PLAIN, 14));
+        subErrorMsg.setForeground(Color.GRAY);
+        subErrorMsg.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        errorPanel.add(iconLabel);
+        errorPanel.add(Box.createRigidArea(new Dimension(0, 15)));
+        errorPanel.add(errorMsg);
+        errorPanel.add(Box.createRigidArea(new Dimension(0, 10)));
+        errorPanel.add(subErrorMsg);
+
+        errorPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        errorPanel.setMaximumSize(new Dimension(400, 200));
+
+        routeContainer.add(Box.createVerticalGlue());
+        routeContainer.add(errorPanel);
+        routeContainer.add(Box.createVerticalGlue());
+
+        totalFareLabel.setText("");
+
+        routeContainer.revalidate();
+        routeContainer.repaint();
+    }
+
     // ================= FIXED TRANSFER =================
     private JPanel createTransferPanel(String fromLine, String toLine, String station) {
 

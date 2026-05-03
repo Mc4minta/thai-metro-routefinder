@@ -19,7 +19,7 @@ The Route Finder uses an **edge-weighted graph with Dijkstra’s Algorithm** to 
   - BTS Silom Line (DG)
 - **Accurate Fare Engine**: Calculates exact travel costs utilizing explicitly defined fare matrices for each line.
 - **Interchange & Discount Logic**: Automatically applies conditional discounts when transferring between compatible lines at official interchange stations (e.g., Tao Poon, Lat Phrao, Nonthaburi Civic Center).
-- **Same-Station Routing**: Computes accurate minimum entry/exit fares if the start and end destinations are the same station.
+- **Same-Station Routing**: Computes accurate minimum entry/exit fares if the start and end destinations are exactly the same station.
 - **Interactive UI**: A Model-View-Controller (MVC) compliant Java Swing interface that provides step-by-step route breakdowns, grouping consecutive stations by line, and clearly visualizing transfer points.
 
 ## Architecture & Algorithm
@@ -37,7 +37,7 @@ All routing and fare logic is strictly confined to the Graph engine (`FareServic
 
 ### JSON Data Structure
 
-The application's transit network is fully data-driven and dynamically loaded from `src/main/resources/data-fare-discount.json`, which contains:
+The application's transit network is fully data-driven and dynamically loaded from `src/main/resources/data.json`, which contains:
 
 - **Stations**: Metadata and UI display names for all nodes.
 - **Edges**: Directional connections representing normal travel (with fare) and Interchange walks (price 0).
@@ -77,10 +77,10 @@ If you need to update the fare prices, station definitions, or discount rules:
 
    ```powershell
    # Run from the project root
-   python script/update_fare_data.py
+   python fix_data.py
    ```
 
-3. The application will automatically ingest the updated `data-fare-discount.json` on the next launch.
+3. The application will automatically ingest the updated `data.json` on the next launch.
 
 ## License
 
