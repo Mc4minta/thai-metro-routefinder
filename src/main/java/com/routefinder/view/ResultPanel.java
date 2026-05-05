@@ -8,11 +8,13 @@ import java.util.List;
 
 public class ResultPanel extends JPanel {
 
+    private final RouteController controller;
     private JPanel routeContainer;
     private JLabel totalFareLabel;
     private JLabel subtitleLabel;
 
     public ResultPanel(RouteController controller) {
+        this.controller = controller;
 
         setLayout(new BorderLayout());
         setBackground(new Color(236, 240, 245));
@@ -258,27 +260,9 @@ public class ResultPanel extends JPanel {
     }
 
     private Color getLineColor(String code) {
-        switch (code) {
-            case "PP":
-                return new Color(102, 0, 102);
-            case "BL":
-                return new Color(21, 102, 181);
-            case "PK":
-                return new Color(207, 88, 130);
-            case "YL":
-                return new Color(241, 217, 13);
-            case "ARL":
-                return new Color(100, 38, 40);
-            case "RN":
-                return new Color(221, 7, 11);
-            case "LG":
-                return new Color(113, 185, 38);
-            case "DG":
-                return new Color(3, 129, 125);
-            default:
-                return Color.GRAY;
-        }
+        return controller.getLineColor(code);
     }
+
 
     private void styleButton(JButton btn) {
         btn.setBackground(new Color(231, 76, 60));

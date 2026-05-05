@@ -71,6 +71,11 @@ public class RouteController {
         double groupCost = 0;
 
         for (PathEdge edge : path) {
+            // Skip zero-cost interchange edges where from and to are the same station
+            if (edge.cost == 0 && edge.from.name_en.equals(edge.to.name_en)) {
+                continue;
+            }
+
             if (currentGroupEdge == null) {
                 currentGroupEdge = edge;
                 groupStartName = edge.from.name_th;
@@ -105,6 +110,16 @@ public class RouteController {
 
         return rows;
     }
+
+    public java.awt.Color getLineColor(String lineCode) {
+        for (Line line : dataService.getLines()) {
+            if (line.code.equals(lineCode)) {
+                return line.color;
+            }
+        }
+        return java.awt.Color.GRAY;
+    }
+
 
     public void onBackToInput() {
         if (mainFrame != null) {

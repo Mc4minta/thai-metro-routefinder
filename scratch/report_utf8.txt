@@ -1,0 +1,24 @@
+--- Data Consistency Report ---
+No Errors found.
+Found 292 Warnings:
+  [WARNING] Self-edge found for station RN01 with price 18.0
+  [WARNING] Self-edge found for station RN02 with price 16.0
+  [WARNING] Self-edge found for station RN03 with price 15.0
+  [WARNING] Self-edge found for station RN04 with price 14.0
+  [WARNING] Self-edge found for station RN05 with price 14.0
+  [WARNING] Self-edge found for station RN06 with price 17.0
+  [WARNING] Self-edge found for station RN07 with price 15.0
+  [WARNING] Self-edge found for station RN08 with price 15.0
+  [WARNING] Self-edge found for station RN09 with price 21.0
+  [WARNING] Self-edge found for station RN10 with price 17.0
+  [WARNING] Self-edge found for station A1 with price 15.0
+  [WARNING] Self-edge found for station A2 with price 15.0
+  [WARNING] Self-edge found for station A3 with price 15.0
+  [WARNING] Self-edge found for station A4 with price 15.0
+  [WARNING] Self-edge found for station A5 with price 15.0
+  [WARNING] Self-edge found for station A6 with price 15.0
+  [WARNING] Self-edge found for station A7 with price 15.0
+  [WARNING] Self-edge found for station A8 with price 15.0
+  [WARNING] Self-edge found for station PP01 with price 14
+  [WARNING] Self-edge found for station PP02 with price 14
+  ...

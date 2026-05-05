@@ -1161,636 +1161,6 @@
     ],
     "edges": [
         {
-            "from": "RN01",
-            "to": "RN02",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN03",
-            "line": "RN",
-            "price": 16.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN04",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN05",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN06",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN07",
-            "line": "RN",
-            "price": 27.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN08",
-            "line": "RN",
-            "price": 30.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN09",
-            "line": "RN",
-            "price": 33.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN10",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN01",
-            "line": "RN",
-            "price": 22.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN03",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN04",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN05",
-            "line": "RN",
-            "price": 17.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN06",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN07",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN08",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN09",
-            "line": "RN",
-            "price": 29.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN10",
-            "line": "RN",
-            "price": 38.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN01",
-            "line": "RN",
-            "price": 25.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN02",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN04",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN05",
-            "line": "RN",
-            "price": 14.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN06",
-            "line": "RN",
-            "price": 16.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN07",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN08",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN09",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN10",
-            "line": "RN",
-            "price": 35.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN01",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN02",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN03",
-            "line": "RN",
-            "price": 17.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN05",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN06",
-            "line": "RN",
-            "price": 14.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN07",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN08",
-            "line": "RN",
-            "price": 22.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN09",
-            "line": "RN",
-            "price": 25.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN10",
-            "line": "RN",
-            "price": 34.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN01",
-            "line": "RN",
-            "price": 29.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN02",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN03",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN04",
-            "line": "RN",
-            "price": 16.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN06",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN07",
-            "line": "RN",
-            "price": 17.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN08",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN09",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN10",
-            "line": "RN",
-            "price": 32.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN01",
-            "line": "RN",
-            "price": 33.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN02",
-            "line": "RN",
-            "price": 27.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN03",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN04",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN05",
-            "line": "RN",
-            "price": 19.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN07",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN08",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN09",
-            "line": "RN",
-            "price": 18.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN10",
-            "line": "RN",
-            "price": 27.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN01",
-            "line": "RN",
-            "price": 36.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN02",
-            "line": "RN",
-            "price": 30.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN03",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN04",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN05",
-            "line": "RN",
-            "price": 22.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN06",
-            "line": "RN",
-            "price": 20.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN08",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN09",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN10",
-            "line": "RN",
-            "price": 24.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN01",
-            "line": "RN",
-            "price": 39.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN02",
-            "line": "RN",
-            "price": 33.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN03",
-            "line": "RN",
-            "price": 29.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN04",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN05",
-            "line": "RN",
-            "price": 25.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN06",
-            "line": "RN",
-            "price": 23.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN07",
-            "line": "RN",
-            "price": 18.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN09",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN10",
-            "line": "RN",
-            "price": 21.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN01",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN02",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN03",
-            "line": "RN",
-            "price": 38.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN04",
-            "line": "RN",
-            "price": 35.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN05",
-            "line": "RN",
-            "price": 34.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN06",
-            "line": "RN",
-            "price": 32.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN07",
-            "line": "RN",
-            "price": 27.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN08",
-            "line": "RN",
-            "price": 24.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN10",
-            "line": "RN",
-            "price": 12.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN01",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN02",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN03",
-            "line": "RN",
-            "price": 42.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN04",
-            "line": "RN",
-            "price": 40.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN05",
-            "line": "RN",
-            "price": 38.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN06",
-            "line": "RN",
-            "price": 36.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN07",
-            "line": "RN",
-            "price": 32.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN08",
-            "line": "RN",
-            "price": 29.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN09",
-            "line": "RN",
-            "price": 26.0,
-            "type": "fare"
-        },
-        {
             "from": "A1",
             "to": "A2",
             "line": "ARL",
@@ -3866,77 +3236,77 @@
             "from": "BL01",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 17.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL05",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL06",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL07",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL08",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL09",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL10",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL11",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL01",
             "to": "BL12",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -4125,7 +3495,7 @@
             "from": "BL02",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 17.0,
             "type": "fare"
         },
         {
@@ -4181,77 +3551,77 @@
             "from": "BL02",
             "to": "BL10",
             "line": "BL",
-            "price": 17.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL11",
             "line": "BL",
-            "price": 20.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL12",
             "line": "BL",
-            "price": 22.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL13",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL14",
             "line": "BL",
-            "price": 27.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL15",
             "line": "BL",
-            "price": 30.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL16",
             "line": "BL",
-            "price": 32.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL17",
             "line": "BL",
-            "price": 35.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL18",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL19",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL20",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -4272,119 +3642,119 @@
             "from": "BL02",
             "to": "BL23",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL24",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL25",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL26",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL27",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL33",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL34",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL35",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL36",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL37",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL02",
             "to": "BL38",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
@@ -4440,70 +3810,70 @@
             "from": "BL03",
             "to": "BL10",
             "line": "BL",
-            "price": 20.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL11",
             "line": "BL",
-            "price": 22.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL12",
             "line": "BL",
-            "price": 25.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL13",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL14",
             "line": "BL",
-            "price": 30.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL15",
             "line": "BL",
-            "price": 32.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL16",
             "line": "BL",
-            "price": 35.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL17",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL18",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL19",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -4538,112 +3908,112 @@
             "from": "BL03",
             "to": "BL24",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL25",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL26",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL27",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL33",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL34",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL35",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL36",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL37",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL03",
             "to": "BL38",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
@@ -4699,63 +4069,63 @@
             "from": "BL04",
             "to": "BL10",
             "line": "BL",
-            "price": 22.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL11",
             "line": "BL",
-            "price": 25.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL12",
             "line": "BL",
-            "price": 27.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL13",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL14",
             "line": "BL",
-            "price": 32.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL15",
             "line": "BL",
-            "price": 35.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL16",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL17",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL18",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -4804,105 +4174,105 @@
             "from": "BL04",
             "to": "BL25",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL26",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL27",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL33",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL34",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL35",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL36",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL37",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL04",
             "to": "BL38",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL01",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
@@ -4958,56 +4328,56 @@
             "from": "BL05",
             "to": "BL10",
             "line": "BL",
-            "price": 25.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL11",
             "line": "BL",
-            "price": 27.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL12",
             "line": "BL",
-            "price": 30.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL13",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL14",
             "line": "BL",
-            "price": 35.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL15",
             "line": "BL",
-            "price": 37.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL16",
             "line": "BL",
-            "price": 40.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL17",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -5070,98 +4440,98 @@
             "from": "BL05",
             "to": "BL26",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL27",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL33",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL34",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL35",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL36",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL37",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL05",
             "to": "BL38",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL01",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
@@ -5217,56 +4587,56 @@
             "from": "BL06",
             "to": "BL10",
             "line": "BL",
-            "price": 27.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL11",
             "line": "BL",
-            "price": 30.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL12",
             "line": "BL",
-            "price": 32.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL13",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL14",
             "line": "BL",
-            "price": 37.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL15",
             "line": "BL",
-            "price": 40.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL16",
             "line": "BL",
-            "price": 42.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL17",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -5336,91 +4706,91 @@
             "from": "BL06",
             "to": "BL27",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL32",
             "line": "BL",
-            "price": 42.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL33",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL34",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL35",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL36",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL37",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL06",
             "to": "BL38",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL01",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
@@ -5476,28 +4846,28 @@
             "from": "BL07",
             "to": "BL10",
             "line": "BL",
-            "price": 30.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL11",
             "line": "BL",
-            "price": 32.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL12",
             "line": "BL",
-            "price": 35.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL13",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
@@ -5511,28 +4881,28 @@
             "from": "BL07",
             "to": "BL15",
             "line": "BL",
-            "price": 42.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL16",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL17",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL18",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -5602,84 +4972,84 @@
             "from": "BL07",
             "to": "BL28",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL30",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL31",
             "line": "BL",
-            "price": 42.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL32",
             "line": "BL",
-            "price": 40.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL33",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL34",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL35",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL36",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL37",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL07",
             "to": "BL38",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL01",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
@@ -5735,70 +5105,70 @@
             "from": "BL08",
             "to": "BL10",
             "line": "BL",
-            "price": 32.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL11",
             "line": "BL",
-            "price": 35.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL12",
             "line": "BL",
-            "price": 37.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL13",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL14",
             "line": "BL",
-            "price": 42.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL15",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL16",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL17",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL18",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL19",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -5868,77 +5238,77 @@
             "from": "BL08",
             "to": "BL29",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL30",
             "line": "BL",
-            "price": 42.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL31",
             "line": "BL",
-            "price": 40.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL32",
             "line": "BL",
-            "price": 37.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL33",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL34",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL35",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL36",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL37",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL08",
             "to": "BL38",
             "line": "BL",
-            "price": 20.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL01",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
@@ -5994,28 +5364,28 @@
             "from": "BL09",
             "to": "BL10",
             "line": "BL",
-            "price": 35.0,
+            "price": 17.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL11",
             "line": "BL",
-            "price": 37.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL12",
             "line": "BL",
-            "price": 40.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL13",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
@@ -6134,126 +5504,126 @@
             "from": "BL09",
             "to": "BL30",
             "line": "BL",
-            "price": 40.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL31",
             "line": "BL",
-            "price": 37.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL32",
             "line": "BL",
-            "price": 35.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL33",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL34",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL35",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL36",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL37",
             "line": "BL",
-            "price": 20.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL09",
             "to": "BL38",
             "line": "BL",
-            "price": 17.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL02",
             "line": "BL",
-            "price": 17.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL03",
             "line": "BL",
-            "price": 20.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL04",
             "line": "BL",
-            "price": 22.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL05",
             "line": "BL",
-            "price": 25.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL06",
             "line": "BL",
-            "price": 27.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL07",
             "line": "BL",
-            "price": 30.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL08",
             "line": "BL",
-            "price": 32.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL09",
             "line": "BL",
-            "price": 35.0,
+            "price": 17.0,
             "type": "fare"
         },
         {
@@ -6400,28 +5770,28 @@
             "from": "BL10",
             "to": "BL31",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL33",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL34",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -6435,84 +5805,84 @@
             "from": "BL10",
             "to": "BL36",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL37",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL10",
             "to": "BL38",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL02",
             "line": "BL",
-            "price": 20.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL03",
             "line": "BL",
-            "price": 22.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL04",
             "line": "BL",
-            "price": 25.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL05",
             "line": "BL",
-            "price": 27.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL06",
             "line": "BL",
-            "price": 30.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL07",
             "line": "BL",
-            "price": 32.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL08",
             "line": "BL",
-            "price": 35.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL09",
             "line": "BL",
-            "price": 37.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
@@ -6666,14 +6036,14 @@
             "from": "BL11",
             "to": "BL32",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL33",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -6701,77 +6071,77 @@
             "from": "BL11",
             "to": "BL37",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL11",
             "to": "BL38",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL01",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL02",
             "line": "BL",
-            "price": 22.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL03",
             "line": "BL",
-            "price": 25.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL04",
             "line": "BL",
-            "price": 27.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL05",
             "line": "BL",
-            "price": 30.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL06",
             "line": "BL",
-            "price": 32.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL07",
             "line": "BL",
-            "price": 35.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL08",
             "line": "BL",
-            "price": 37.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL12",
             "to": "BL09",
             "line": "BL",
-            "price": 40.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
@@ -6967,7 +6337,7 @@
             "from": "BL12",
             "to": "BL38",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -6981,56 +6351,56 @@
             "from": "BL13",
             "to": "BL02",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL03",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL04",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL05",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL06",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL07",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL08",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL13",
             "to": "BL09",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
@@ -7240,56 +6610,56 @@
             "from": "BL14",
             "to": "BL02",
             "line": "BL",
-            "price": 27.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL03",
             "line": "BL",
-            "price": 30.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL04",
             "line": "BL",
-            "price": 32.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL05",
             "line": "BL",
-            "price": 35.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL06",
             "line": "BL",
-            "price": 37.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL07",
             "line": "BL",
-            "price": 40.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL08",
             "line": "BL",
-            "price": 42.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL14",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
@@ -7499,56 +6869,56 @@
             "from": "BL15",
             "to": "BL02",
             "line": "BL",
-            "price": 30.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL03",
             "line": "BL",
-            "price": 32.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL04",
             "line": "BL",
-            "price": 35.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL05",
             "line": "BL",
-            "price": 37.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL06",
             "line": "BL",
-            "price": 40.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL07",
             "line": "BL",
-            "price": 42.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL15",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
@@ -7758,56 +7128,56 @@
             "from": "BL16",
             "to": "BL02",
             "line": "BL",
-            "price": 32.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL03",
             "line": "BL",
-            "price": 35.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL04",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL05",
             "line": "BL",
-            "price": 40.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL06",
             "line": "BL",
-            "price": 42.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL16",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
@@ -8017,56 +7387,56 @@
             "from": "BL17",
             "to": "BL02",
             "line": "BL",
-            "price": 35.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL03",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL04",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL05",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL17",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
@@ -8276,21 +7646,21 @@
             "from": "BL18",
             "to": "BL02",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL18",
             "to": "BL03",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL18",
             "to": "BL04",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -8311,21 +7681,21 @@
             "from": "BL18",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL18",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL18",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
@@ -8535,14 +7905,14 @@
             "from": "BL19",
             "to": "BL02",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL19",
             "to": "BL03",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -8577,14 +7947,14 @@
             "from": "BL19",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL19",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
@@ -8794,7 +8164,7 @@
             "from": "BL20",
             "to": "BL02",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -8843,7 +8213,7 @@
             "from": "BL20",
             "to": "BL09",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -9571,7 +8941,7 @@
             "from": "BL23",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -9830,14 +9200,14 @@
             "from": "BL24",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL24",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -10089,21 +9459,21 @@
             "from": "BL25",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL25",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL25",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -10348,28 +9718,28 @@
             "from": "BL26",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL26",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL26",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL26",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -10607,35 +9977,35 @@
             "from": "BL27",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL27",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL27",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL27",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL27",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -10866,42 +10236,42 @@
             "from": "BL28",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL28",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL28",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL28",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL28",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL28",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -11125,56 +10495,56 @@
             "from": "BL29",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL08",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL29",
             "to": "BL09",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -11384,56 +10754,56 @@
             "from": "BL30",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL07",
             "line": "BL",
-            "price": 45.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL08",
             "line": "BL",
-            "price": 42.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL30",
             "to": "BL09",
             "line": "BL",
-            "price": 40.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -11643,63 +11013,63 @@
             "from": "BL31",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL06",
             "line": "BL",
-            "price": 45.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL07",
             "line": "BL",
-            "price": 42.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL08",
             "line": "BL",
-            "price": 40.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL09",
             "line": "BL",
-            "price": 37.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL31",
             "to": "BL10",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -11902,70 +11272,70 @@
             "from": "BL32",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL04",
             "line": "BL",
-            "price": 45.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL05",
             "line": "BL",
-            "price": 45.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL06",
             "line": "BL",
-            "price": 42.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL07",
             "line": "BL",
-            "price": 40.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL08",
             "line": "BL",
-            "price": 37.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL09",
             "line": "BL",
-            "price": 35.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL10",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL32",
             "to": "BL11",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -12161,70 +11531,70 @@
             "from": "BL33",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 20.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL03",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL04",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL05",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL06",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL07",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL08",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL09",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL10",
             "line": "BL",
-            "price": 45.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL33",
             "to": "BL11",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -12420,63 +11790,63 @@
             "from": "BL34",
             "to": "BL02",
             "line": "BL",
-            "price": 45.0,
+            "price": 22.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL03",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL04",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL05",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL06",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL07",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL08",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL09",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL34",
             "to": "BL10",
             "line": "BL",
-            "price": 45.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -12679,56 +12049,56 @@
             "from": "BL35",
             "to": "BL02",
             "line": "BL",
-            "price": 42.0,
+            "price": 25.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL03",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL04",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL05",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL06",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL07",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL08",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL35",
             "to": "BL09",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
@@ -12938,63 +12308,63 @@
             "from": "BL36",
             "to": "BL02",
             "line": "BL",
-            "price": 40.0,
+            "price": 27.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL03",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL04",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL05",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL06",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL07",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL08",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL09",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL36",
             "to": "BL10",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -13197,70 +12567,70 @@
             "from": "BL37",
             "to": "BL02",
             "line": "BL",
-            "price": 37.0,
+            "price": 30.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL03",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL04",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL05",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL06",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL07",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL08",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL09",
             "line": "BL",
-            "price": 20.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL10",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL37",
             "to": "BL11",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -13456,77 +12826,77 @@
             "from": "BL38",
             "to": "BL02",
             "line": "BL",
-            "price": 35.0,
+            "price": 32.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL03",
             "line": "BL",
-            "price": 32.0,
+            "price": 35.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL04",
             "line": "BL",
-            "price": 30.0,
+            "price": 37.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL05",
             "line": "BL",
-            "price": 27.0,
+            "price": 40.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL06",
             "line": "BL",
-            "price": 25.0,
+            "price": 42.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL07",
             "line": "BL",
-            "price": 22.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL08",
             "line": "BL",
-            "price": 20.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL09",
             "line": "BL",
-            "price": 17.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL10",
             "line": "BL",
-            "price": 37.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL11",
             "line": "BL",
-            "price": 40.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
             "from": "BL38",
             "to": "BL12",
             "line": "BL",
-            "price": 42.0,
+            "price": 45.0,
             "type": "fare"
         },
         {
@@ -38566,76 +37936,6 @@
             "to": "PK29",
             "line": "PK",
             "price": 18,
-            "type": "fare"
-        },
-        {
-            "from": "RN01",
-            "to": "RN01",
-            "line": "RN",
-            "price": 18.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN02",
-            "to": "RN02",
-            "line": "RN",
-            "price": 16.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN03",
-            "to": "RN03",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN04",
-            "to": "RN04",
-            "line": "RN",
-            "price": 14.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN05",
-            "to": "RN05",
-            "line": "RN",
-            "price": 14.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN06",
-            "to": "RN06",
-            "line": "RN",
-            "price": 17.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN07",
-            "to": "RN07",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN08",
-            "to": "RN08",
-            "line": "RN",
-            "price": 15.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN09",
-            "to": "RN09",
-            "line": "RN",
-            "price": 21.0,
-            "type": "fare"
-        },
-        {
-            "from": "RN10",
-            "to": "RN10",
-            "line": "RN",
-            "price": 17.0,
             "type": "fare"
         },
         {
@@ -38873,7 +38173,7 @@
             "from": "BL10",
             "to": "BL10",
             "line": "BL",
-            "price": 17.0,
+            "price": 16.0,
             "type": "fare"
         },
         {
@@ -41300,6 +40600,706 @@
             "to": "PK24",
             "line": "PK",
             "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN01",
+            "line": "RN",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN02",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN03",
+            "line": "RN",
+            "price": 16.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN04",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN05",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN06",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN07",
+            "line": "RN",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN08",
+            "line": "RN",
+            "price": 30.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN09",
+            "line": "RN",
+            "price": 33.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN01",
+            "to": "RN10",
+            "line": "RN",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN01",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN02",
+            "line": "RN",
+            "price": 16.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN03",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN04",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN05",
+            "line": "RN",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN06",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN07",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN08",
+            "line": "RN",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN09",
+            "line": "RN",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN02",
+            "to": "RN10",
+            "line": "RN",
+            "price": 38.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN01",
+            "line": "RN",
+            "price": 16.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN02",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN03",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN04",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN05",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN06",
+            "line": "RN",
+            "price": 16.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN07",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN08",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN09",
+            "line": "RN",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN03",
+            "to": "RN10",
+            "line": "RN",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN01",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN02",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN03",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN04",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN05",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN06",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN07",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN08",
+            "line": "RN",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN09",
+            "line": "RN",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN04",
+            "to": "RN10",
+            "line": "RN",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN01",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN02",
+            "line": "RN",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN03",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN04",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN05",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN06",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN07",
+            "line": "RN",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN08",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN09",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN05",
+            "to": "RN10",
+            "line": "RN",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN01",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN02",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN03",
+            "line": "RN",
+            "price": 16.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN04",
+            "line": "RN",
+            "price": 14.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN05",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN06",
+            "line": "RN",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN07",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN08",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN09",
+            "line": "RN",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN06",
+            "to": "RN10",
+            "line": "RN",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN01",
+            "line": "RN",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN02",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN03",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN04",
+            "line": "RN",
+            "price": 19.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN05",
+            "line": "RN",
+            "price": 17.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN06",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN07",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN08",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN09",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN07",
+            "to": "RN10",
+            "line": "RN",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN01",
+            "line": "RN",
+            "price": 30.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN02",
+            "line": "RN",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN03",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN04",
+            "line": "RN",
+            "price": 22.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN05",
+            "line": "RN",
+            "price": 20.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN06",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN07",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN08",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN09",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN08",
+            "to": "RN10",
+            "line": "RN",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN01",
+            "line": "RN",
+            "price": 33.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN02",
+            "line": "RN",
+            "price": 29.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN03",
+            "line": "RN",
+            "price": 26.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN04",
+            "line": "RN",
+            "price": 25.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN05",
+            "line": "RN",
+            "price": 23.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN06",
+            "line": "RN",
+            "price": 18.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN07",
+            "line": "RN",
+            "price": 15.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN08",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN09",
+            "line": "RN",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN09",
+            "to": "RN10",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN01",
+            "line": "RN",
+            "price": 42.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN02",
+            "line": "RN",
+            "price": 38.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN03",
+            "line": "RN",
+            "price": 35.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN04",
+            "line": "RN",
+            "price": 34.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN05",
+            "line": "RN",
+            "price": 32.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN06",
+            "line": "RN",
+            "price": 27.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN07",
+            "line": "RN",
+            "price": 24.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN08",
+            "line": "RN",
+            "price": 21.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN09",
+            "line": "RN",
+            "price": 12.0,
+            "type": "fare"
+        },
+        {
+            "from": "RN10",
+            "to": "RN10",
+            "line": "RN",
+            "price": 17.0,
             "type": "fare"
         }
     ],
