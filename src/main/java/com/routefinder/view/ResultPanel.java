@@ -75,28 +75,12 @@ public class ResultPanel extends JPanel {
     }
 
     // ================= RESULT =================
-    public void setResult(List<Object[]> rows, double totalFare) {
+    public void setResult(List<Object[]> rows, double totalFare, String startStationName, String endStationName) {
 
         routeContainer.removeAll();
 
-        if (rows != null && !rows.isEmpty()) {
-            String overallStart = null;
-            String overallEnd = null;
-            for (Object[] row : rows) {
-                if (row.length > 0 && "STEP".equals(String.valueOf(row[0]))) {
-                    if (overallStart == null) {
-                        overallStart = String.valueOf(row[1]);
-                    }
-                    overallEnd = String.valueOf(row[2]);
-                }
-            }
-            if (overallStart == null) {
-                overallStart = String.valueOf(rows.get(0)[0]);
-            }
-            if (overallEnd == null) {
-                overallEnd = String.valueOf(rows.get(rows.size() - 1)[rows.get(rows.size() - 1).length - 1]);
-            }
-            subtitleLabel.setText(overallStart + "  →  " + overallEnd);
+        if (startStationName != null && endStationName != null) {
+            subtitleLabel.setText(startStationName + "  →  " + endStationName);
         } else {
             subtitleLabel.setText("");
         }
