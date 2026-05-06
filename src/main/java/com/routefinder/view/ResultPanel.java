@@ -80,8 +80,22 @@ public class ResultPanel extends JPanel {
         routeContainer.removeAll();
 
         if (rows != null && !rows.isEmpty()) {
-            String overallStart = String.valueOf(rows.get(0)[0]);
-            String overallEnd = String.valueOf(rows.get(rows.size() - 1)[1]);
+            String overallStart = null;
+            String overallEnd = null;
+            for (Object[] row : rows) {
+                if (row.length > 0 && "STEP".equals(String.valueOf(row[0]))) {
+                    if (overallStart == null) {
+                        overallStart = String.valueOf(row[1]);
+                    }
+                    overallEnd = String.valueOf(row[2]);
+                }
+            }
+            if (overallStart == null) {
+                overallStart = String.valueOf(rows.get(0)[0]);
+            }
+            if (overallEnd == null) {
+                overallEnd = String.valueOf(rows.get(rows.size() - 1)[rows.get(rows.size() - 1).length - 1]);
+            }
             subtitleLabel.setText(overallStart + "  →  " + overallEnd);
         } else {
             subtitleLabel.setText("");
@@ -90,25 +104,30 @@ public class ResultPanel extends JPanel {
         for (int i = 0; i < rows.size(); i++) {
 
             Object[] row = rows.get(i);
-            String startStation = String.valueOf(row[0]);
-            String endStation = String.valueOf(row[1]);
-            String lineCode = String.valueOf(row[2]);
-            String fare = String.valueOf(row[3]);
+            String rowType = String.valueOf(row[0]);
 
-            // ===== TRANSFER =====
-            if (i > 0) {
-                String prevLine = String.valueOf(rows.get(i - 1)[2]);
-
-                if (!lineCode.equals(prevLine)) {
-                    routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
-                    routeContainer.add(createTransferPanel(prevLine, lineCode, startStation));
-                    routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
-                } else {
-                    routeContainer.add(Box.createRigidArea(new Dimension(0, 10)));
-                }
+            if ("TRANSFER".equals(rowType)) {
+                String fromLine = String.valueOf(row[1]);
+                String toLine = String.valueOf(row[2]);
+                String station = String.valueOf(row[3]);
+                routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
+                routeContainer.add(createTransferPanel(fromLine, toLine, station));
+                routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
+                continue;
             }
 
-            routeContainer.add(createStepCard(startStation, endStation, lineCode, fare));
+            if ("STEP".equals(rowType)) {
+                String startStation = String.valueOf(row[1]);
+                String endStation = String.valueOf(row[2]);
+                String lineCode = String.valueOf(row[3]);
+                String fare = String.valueOf(row[4]);
+
+                if (i > 0 && !"TRANSFER".equals(String.valueOf(rows.get(i - 1)[0]))) {
+                    routeContainer.add(Box.createRigidArea(new Dimension(0, 10)));
+                }
+
+                routeContainer.add(createStepCard(startStation, endStation, lineCode, fare));
+            }
         }
 
         routeContainer.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -278,4 +297,5 @@ public class ResultPanel extends JPanel {
         }
         return String.format("%.2f บาท", amount);
     }
+
 }

@@ -55,7 +55,7 @@ public class RouteController {
                 totalFare += edge.cost;
             }
 
-            mainFrame.setResult(rows, totalFare);
+            mainFrame.setResult(rows, totalFare, start.name_th, end.name_th);
             mainFrame.showResult();
         }
     }
@@ -74,6 +74,7 @@ public class RouteController {
             if (edge.isInterchange) {
                 if (currentGroupEdge != null) {
                     rows.add(new Object[] {
+                            "STEP",
                             groupStartName,
                             currentGroupEdge.to.name_th,
                             currentGroupEdge.line,
@@ -84,10 +85,10 @@ public class RouteController {
                     groupCost = 0;
                 }
                 rows.add(new Object[] {
-                        edge.from.name_th,
-                        edge.to.name_th,
-                        edge.line,
-                        String.format("%.2f", edge.cost)
+                        "TRANSFER",
+                        edge.from.line,
+                        edge.to.line,
+                        edge.to.name_th
                 });
                 continue;
             }
@@ -103,6 +104,7 @@ public class RouteController {
             } else {
                 // Line changed, flush previous group
                 rows.add(new Object[] {
+                        "STEP",
                         groupStartName,
                         currentGroupEdge.to.name_th,
                         currentGroupEdge.line,
@@ -117,6 +119,7 @@ public class RouteController {
         // Flush last group
         if (currentGroupEdge != null) {
             rows.add(new Object[] {
+                    "STEP",
                     groupStartName,
                     currentGroupEdge.to.name_th,
                     currentGroupEdge.line,

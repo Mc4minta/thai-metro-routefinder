@@ -48,8 +48,8 @@ public class MainFrame extends JFrame {
         cardLayout.show(cardPanel, RESULT);
     }
 
-    public void setResult(java.util.List<Object[]> rows, double totalFare) {
-        resultPanel.setResult(rows, totalFare);
+    public void setResult(java.util.List<Object[]> rows, double totalFare, String startStation, String endStation) {
+        resultPanel.setResult(rows, totalFare, startStation, endStation);
     }
 
     public void showNoRoute() {
