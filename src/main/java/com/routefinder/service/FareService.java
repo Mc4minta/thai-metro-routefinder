@@ -84,7 +84,7 @@ public class FareService {
         Node endId = new Node(end.id, end.line); // Target can be any node with this station ID
 
         PriorityQueue<State> pq = new PriorityQueue<>(Comparator.comparingDouble(s -> s.cost));
-        Map<Node, Map<Boolean, Double>> dist = new HashMap<>();
+        Map<Node, Map<String, Double>> dist = new HashMap<>();
 
         Station fullStart = getStation(startNode);
         Station fullEnd = getStation(endId);
@@ -105,14 +105,14 @@ public class FareService {
             }
         }
 
-        pq.add(new State(startNode, 0.0, false, null, null));
+        pq.add(new State(startNode, 0.0, null, null, null));
 
         State bestGoal = null;
 
         while (!pq.isEmpty()) {
             State curr = pq.poll();
 
-            if (curr.cost > dist.getOrDefault(curr.node, Collections.emptyMap()).getOrDefault(curr.afterInterchange,
+            if (curr.cost > dist.getOrDefault(curr.node, Collections.emptyMap()).getOrDefault(curr.discountFromLineKey(),
                     Double.MAX_VALUE)) {
                 continue;
             }
@@ -127,28 +127,43 @@ public class FareService {
 
             List<Edge> neighbors = adj.getOrDefault(curr.node, Collections.emptyList());
             for (Edge e : neighbors) {
-                double travelCost = e.weight;
-                boolean nextAfterInterchange = e.isInterchange;
+                // Avoid immediately undoing an interchange. Without this guard, the graph
+                // can form zero-cost loops such as BL10 -> PP16 -> BL10, which then allows
+                // the search to apply a transfer discount on a detour that should not exist.
+                if (e.isInterchange && curr.parentState != null && e.to.equals(curr.parentState.node)) {
+                    continue;
+                }
 
-                if (!e.isInterchange && curr.afterInterchange) {
-                    // Apply discount
+                // Self-fare edges are only meant for the special same-station case handled
+                // above. During normal routing they create artificial detours that can pick
+                // up a transfer discount and undercut the real fare.
+                if (!e.isInterchange && e.to.equals(curr.node)) {
+                    continue;
+                }
+
+                double travelCost = e.weight;
+                String nextDiscountFromLine = e.isInterchange ? curr.node.lineCode : null;
+
+                if (!e.isInterchange && curr.pendingDiscountFromLine != null) {
                     double discount = 0;
-                    if (discounts.containsKey(curr.parentState.node.lineCode)) {
-                        discount = discounts.get(curr.parentState.node.lineCode).getOrDefault(e.to.lineCode, 0.0);
+                    if (discounts.containsKey(curr.pendingDiscountFromLine)) {
+                        discount = discounts.get(curr.pendingDiscountFromLine).getOrDefault(e.to.lineCode, 0.0);
                     }
                     travelCost = Math.max(0, travelCost - discount);
                 }
 
                 double newCost = curr.cost + travelCost;
 
-                Map<Boolean, Double> nodeDists = dist.computeIfAbsent(e.to, k -> new HashMap<>());
-                if (newCost < nodeDists.getOrDefault(nextAfterInterchange, Double.MAX_VALUE)) {
-                    nodeDists.put(nextAfterInterchange, newCost);
-                    pq.add(new State(e.to, newCost, nextAfterInterchange, curr, new PathEdge(
+                Map<String, Double> nodeDists = dist.computeIfAbsent(e.to, k -> new HashMap<>());
+                String nextDiscountKey = State.discountFromLineKey(nextDiscountFromLine);
+                if (newCost < nodeDists.getOrDefault(nextDiscountKey, Double.MAX_VALUE)) {
+                    nodeDists.put(nextDiscountKey, newCost);
+                    pq.add(new State(e.to, newCost, nextDiscountFromLine, curr, new PathEdge(
                             getStation(curr.node),
                             getStation(e.to),
                             e.to.lineCode,
-                            travelCost)));
+                            travelCost,
+                            e.isInterchange)));
                 }
             }
         }
@@ -211,16 +226,24 @@ public class FareService {
     private static class State {
         Node node;
         double cost;
-        boolean afterInterchange;
+        String pendingDiscountFromLine;
         State parentState;
         PathEdge edgeUsed;
 
-        State(Node node, double cost, boolean afterInterchange, State parentState, PathEdge edgeUsed) {
+        State(Node node, double cost, String pendingDiscountFromLine, State parentState, PathEdge edgeUsed) {
             this.node = node;
             this.cost = cost;
-            this.afterInterchange = afterInterchange;
+            this.pendingDiscountFromLine = pendingDiscountFromLine;
             this.parentState = parentState;
             this.edgeUsed = edgeUsed;
+        }
+
+        String discountFromLineKey() {
+            return discountFromLineKey(pendingDiscountFromLine);
+        }
+
+        static String discountFromLineKey(String lineCode) {
+            return lineCode == null ? "" : lineCode;
         }
     }
 }

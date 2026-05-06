@@ -71,8 +71,24 @@ public class RouteController {
         double groupCost = 0;
 
         for (PathEdge edge : path) {
-            // Skip zero-cost interchange edges where from and to are the same station
-            if (edge.cost == 0 && edge.from.name_en.equals(edge.to.name_en)) {
+            if (edge.isInterchange) {
+                if (currentGroupEdge != null) {
+                    rows.add(new Object[] {
+                            groupStartName,
+                            currentGroupEdge.to.name_th,
+                            currentGroupEdge.line,
+                            String.format("%.2f", groupCost)
+                    });
+                    currentGroupEdge = null;
+                    groupStartName = null;
+                    groupCost = 0;
+                }
+                rows.add(new Object[] {
+                        edge.from.name_th,
+                        edge.to.name_th,
+                        edge.line,
+                        String.format("%.2f", edge.cost)
+                });
                 continue;
             }
 

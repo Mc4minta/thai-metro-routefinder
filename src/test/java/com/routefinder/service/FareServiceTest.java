@@ -144,6 +144,42 @@ public class FareServiceTest {
     }
 
     @Test
+    public void testShortSingleLineBlueDoesNotUseInterchangeDiscount() {
+        Station start = new Station();
+        start.id = "BL01";
+        start.line = "BL";
+
+        Station end = new Station();
+        end.id = "BL03";
+        end.line = "BL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertEquals(20.0, totalCost, 0.01);
+    }
+
+    @Test
+    public void testTaoPoonBlueToKamphaengPhetStaysOnBlueLine() {
+        Station start = new Station();
+        start.id = "BL10";
+        start.line = "BL";
+
+        Station end = new Station();
+        end.id = "BL12";
+        end.line = "BL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertEquals(1, route.size(), "Route should stay on the Blue Line without a transfer loop");
+        assertFalse(route.get(0).isInterchange, "Direct Blue Line route should not include an interchange");
+        assertEquals(20.0, route.get(0).cost, 0.01, "Tao Poon to Kamphaeng Phet should cost 20 baht");
+    }
+
+    @Test
     public void testSameStationDifferentLineLatPhrao() {
         // BL15 -> YL01 (Lat Phrao)
         Station start = new Station();
@@ -159,6 +195,24 @@ public class FareServiceTest {
         assertNotNull(route);
         assertEquals(1, route.size());
         assertEquals(17.0, route.get(0).cost, 0.01, "Should apply same-station entry/exit fare");
+    }
+
+    @Test
+    public void testMoChitToYellowLineIncludesInterchangeEdges() {
+        Station start = new Station();
+        start.id = "N8";
+        start.line = "LG";
+
+        Station end = new Station();
+        end.id = "YL01";
+        end.line = "YL";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+        long interchangeCount = route.stream().filter(e -> e.isInterchange).count();
+        assertEquals(2, interchangeCount);
     }
 
     @Test

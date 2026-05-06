@@ -56,7 +56,7 @@ public class ResultPanel extends JPanel {
         JPanel bottom = new JPanel(new BorderLayout());
         bottom.setBackground(new Color(236, 240, 245));
 
-        totalFareLabel = new JLabel("ราคารวม: ฿0.00", SwingConstants.CENTER);
+        totalFareLabel = new JLabel("ราคารวม: 0 บาท", SwingConstants.CENTER);
         totalFareLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
         totalFareLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -113,7 +113,7 @@ public class ResultPanel extends JPanel {
 
         routeContainer.add(Box.createRigidArea(new Dimension(0, 10)));
 
-        totalFareLabel.setText(String.format("ราคารวม: ฿%.2f", totalFare));
+        totalFareLabel.setText("ราคารวม: " + formatBaht(totalFare));
 
         routeContainer.revalidate();
         routeContainer.repaint();
@@ -229,7 +229,7 @@ public class ResultPanel extends JPanel {
         JLabel stationsLabel = new JLabel(startStation + "  →  " + endStation);
         stationsLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
 
-        JLabel fareLabel = new JLabel("฿" + fare);
+        JLabel fareLabel = new JLabel(formatBaht(Double.parseDouble(fare)));
         fareLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -270,5 +270,12 @@ public class ResultPanel extends JPanel {
         btn.setFocusPainted(false);
         btn.setFont(new Font("Tahoma", Font.BOLD, 14));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }
+
+    private String formatBaht(double amount) {
+        if (Math.abs(amount - Math.rint(amount)) < 0.0001) {
+            return String.format("%.0f บาท", amount);
+        }
+        return String.format("%.2f บาท", amount);
     }
 }
