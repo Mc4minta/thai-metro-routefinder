@@ -170,7 +170,7 @@ public class Test extends JPanel {
         prefix.setFont(font);
         prefix.setForeground(Color.BLACK);
         middle.setFont(font);
-        middle.setForeground(cFrom);
+        middle.setForeground(Color.BLACK);
         suffix.setFont(font);
         suffix.setForeground(Color.BLACK);
 
