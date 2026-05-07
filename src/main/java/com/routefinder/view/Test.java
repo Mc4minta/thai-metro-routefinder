@@ -129,7 +129,7 @@ public class Test extends JPanel {
 
                 if (!lineCode.equals(prevLine)) {
                     routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
-                    routeContainer.add(createTransferPanel(prevLine, lineCode, startStation));
+                    routeContainer.add(createTransferPanel(prevLine, lineCode, String.valueOf(rows.get(i - 1)[1]), startStation));
                     routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
                 } else {
                     routeContainer.add(Box.createRigidArea(new Dimension(0, 10)));
@@ -148,7 +148,7 @@ public class Test extends JPanel {
     }
 
     // ================= FIXED TRANSFER =================
-    private JPanel createTransferPanel(String fromLine, String toLine, String station) {
+    private JPanel createTransferPanel(String fromLine, String toLine, String fromStation, String toStation) {
 
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 5, 0));
         panel.setOpaque(false);
@@ -161,13 +161,18 @@ public class Test extends JPanel {
         JLabel middle = new JLabel(" ไป ");
         JLabel to = new JLabel(toLine);
         JLabel suffix = new JLabel(" ที่สถานี ");
-        JLabel stationLbl = new JLabel(station);
+        JLabel fromStationLbl = new JLabel(fromStation);
+        JLabel transferArrow = new JLabel(" ไป ");
+        JLabel toStationLbl = new JLabel(toStation);
 
         Font font = new Font("Tahoma", Font.BOLD, 14);
 
         prefix.setFont(font);
+        prefix.setForeground(Color.BLACK);
         middle.setFont(font);
+        middle.setForeground(cFrom);
         suffix.setFont(font);
+        suffix.setForeground(Color.BLACK);
 
         from.setFont(font);
         from.setForeground(cFrom);
@@ -175,16 +180,23 @@ public class Test extends JPanel {
         to.setFont(font);
         to.setForeground(cTo);
 
-        // ✅ ใช้สีสายต้นทาง
-        stationLbl.setFont(font);
-        stationLbl.setForeground(cFrom);
+        fromStationLbl.setFont(font);
+        fromStationLbl.setForeground(cFrom);
+
+        transferArrow.setFont(font);
+        transferArrow.setForeground(Color.DARK_GRAY);
+
+        toStationLbl.setFont(font);
+        toStationLbl.setForeground(cTo);
 
         panel.add(prefix);
         panel.add(from);
         panel.add(middle);
         panel.add(to);
         panel.add(suffix);
-        panel.add(stationLbl);
+        panel.add(fromStationLbl);
+        panel.add(transferArrow);
+        panel.add(toStationLbl);
 
         panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
 

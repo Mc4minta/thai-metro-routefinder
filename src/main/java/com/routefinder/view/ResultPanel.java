@@ -93,9 +93,10 @@ public class ResultPanel extends JPanel {
             if ("TRANSFER".equals(rowType)) {
                 String fromLine = String.valueOf(row[1]);
                 String toLine = String.valueOf(row[2]);
-                String station = String.valueOf(row[3]);
+                String fromStation = String.valueOf(row[3]);
+                String toStation = String.valueOf(row[4]);
                 routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
-                routeContainer.add(createTransferPanel(fromLine, toLine, station));
+                routeContainer.add(createTransferPanel(fromLine, toLine, fromStation, toStation));
                 routeContainer.add(Box.createRigidArea(new Dimension(0, 5)));
                 continue;
             }
@@ -167,7 +168,7 @@ public class ResultPanel extends JPanel {
     }
 
     // ================= FIXED TRANSFER =================
-    private JPanel createTransferPanel(String fromLine, String toLine, String station) {
+    private JPanel createTransferPanel(String fromLine, String toLine, String fromStation, String toStation) {
 
         JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 5, 0));
         panel.setOpaque(false);
@@ -180,13 +181,18 @@ public class ResultPanel extends JPanel {
         JLabel middle = new JLabel(" ไป ");
         JLabel to = new JLabel(toLine);
         JLabel suffix = new JLabel(" ที่สถานี ");
-        JLabel stationLbl = new JLabel(station);
+        JLabel fromStationLbl = new JLabel(fromStation);
+        JLabel transferArrow = new JLabel(" ไป ");
+        JLabel toStationLbl = new JLabel(toStation);
 
         Font font = new Font("Tahoma", Font.BOLD, 14);
 
         prefix.setFont(font);
+        prefix.setForeground(Color.BLACK);
         middle.setFont(font);
+        middle.setForeground(cFrom);
         suffix.setFont(font);
+        suffix.setForeground(Color.BLACK);
 
         from.setFont(font);
         from.setForeground(cFrom);
@@ -194,15 +200,23 @@ public class ResultPanel extends JPanel {
         to.setFont(font);
         to.setForeground(cTo);
 
-        stationLbl.setFont(font);
-        stationLbl.setForeground(cFrom);
+        fromStationLbl.setFont(font);
+        fromStationLbl.setForeground(cFrom);
+
+        transferArrow.setFont(font);
+        transferArrow.setForeground(Color.DARK_GRAY);
+
+        toStationLbl.setFont(font);
+        toStationLbl.setForeground(cTo);
 
         panel.add(prefix);
         panel.add(from);
         panel.add(middle);
         panel.add(to);
         panel.add(suffix);
-        panel.add(stationLbl);
+        panel.add(fromStationLbl);
+        panel.add(transferArrow);
+        panel.add(toStationLbl);
 
         panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
 

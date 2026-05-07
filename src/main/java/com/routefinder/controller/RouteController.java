@@ -68,28 +68,32 @@ public class RouteController {
 
         PathEdge currentGroupEdge = null;
         String groupStartName = null;
+        String groupEndName = null;
         double groupCost = 0;
 
         for (PathEdge edge : path) {
             if (edge.isInterchange) {
                 if (currentGroupEdge != null) {
+                    groupEndName = currentGroupEdge.to.name_th;
                     rows.add(new Object[] {
                             "STEP",
                             groupStartName,
-                            currentGroupEdge.to.name_th,
+                            groupEndName,
                             currentGroupEdge.line,
                             String.format("%.2f", groupCost)
                     });
-                    currentGroupEdge = null;
-                    groupStartName = null;
-                    groupCost = 0;
                 }
                 rows.add(new Object[] {
                         "TRANSFER",
                         edge.from.line,
                         edge.to.line,
+                        groupEndName != null ? groupEndName : edge.from.name_th,
                         edge.to.name_th
                 });
+                currentGroupEdge = null;
+                groupStartName = null;
+                groupEndName = null;
+                groupCost = 0;
                 continue;
             }
 
@@ -113,15 +117,17 @@ public class RouteController {
                 // Start new group
                 currentGroupEdge = edge;
                 groupStartName = edge.from.name_th;
+                groupEndName = null;
                 groupCost = edge.cost;
             }
         }
         // Flush last group
         if (currentGroupEdge != null) {
+            groupEndName = currentGroupEdge.to.name_th;
             rows.add(new Object[] {
                     "STEP",
                     groupStartName,
-                    currentGroupEdge.to.name_th,
+                    groupEndName,
                     currentGroupEdge.line,
                     String.format("%.2f", groupCost)
             });
