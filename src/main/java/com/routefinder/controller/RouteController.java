@@ -97,6 +97,38 @@ public class RouteController {
                 continue;
             }
 
+            if (isCrossBtsEdge(edge)) {
+                if (currentGroupEdge != null) {
+                    rows.add(new Object[] {
+                            "STEP",
+                            groupStartName,
+                            currentGroupEdge.to.name_th,
+                            currentGroupEdge.line,
+                            String.format("%.2f", groupCost)
+                    });
+                    currentGroupEdge = null;
+                    groupStartName = null;
+                    groupEndName = null;
+                    groupCost = 0;
+                }
+
+                rows.add(new Object[] {
+                        "STEP",
+                        edge.from.name_th,
+                        centralStationId(edge.from.line),
+                        edge.from.line,
+                        String.format("%.2f", edge.cost)
+                });
+                rows.add(new Object[] {
+                        "STEP",
+                        centralStationId(edge.to.line),
+                        edge.to.name_th,
+                        edge.to.line,
+                        "0.00"
+                });
+                continue;
+            }
+
             if (currentGroupEdge == null) {
                 currentGroupEdge = edge;
                 groupStartName = edge.from.name_th;
@@ -134,6 +166,25 @@ public class RouteController {
         }
 
         return rows;
+    }
+
+    private boolean isCrossBtsEdge(PathEdge edge) {
+        if (edge == null || edge.isInterchange) {
+            return false;
+        }
+        boolean fromBts = "DG".equals(edge.from.line) || "LG".equals(edge.from.line);
+        boolean toBts = "DG".equals(edge.to.line) || "LG".equals(edge.to.line);
+        return fromBts && toBts && !edge.from.line.equals(edge.to.line);
+    }
+
+    private String centralStationId(String lineCode) {
+        if ("DG".equals(lineCode)) {
+            return "CEN_DG";
+        }
+        if ("LG".equals(lineCode)) {
+            return "CEN_LG";
+        }
+        return "";
     }
 
     public java.awt.Color getLineColor(String lineCode) {
