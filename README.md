@@ -1,86 +1,89 @@
-# Bangkok Transit Route Finder
+# RouteFinder
 
-A Java Swing application that calculates the optimal route and precise fare across the Bangkok mass transit network (MRT, BTS, SRT, ARL).
+RouteFinder is a Java Swing desktop application for finding transit routes and fares across Bangkok's rail network, including MRT, BTS, SRT, and ARL lines.
 
-## Overview
+## What It Does
 
-The Route Finder uses an **edge-weighted graph with Dijkstra’s Algorithm** to compute the minimum fare route between any two stations. It features a robust implementation of the official transit fare logic, correctly handling complex rules like cross-line transfer discounts.
+- Finds the cheapest route between two selected stations
+- Computes fares using a data-driven graph loaded from `src/main/resources/data.json`
+- Applies interchange rules and transfer discounts when needed
+- Displays grouped route steps and transfer points in a Swing UI
 
-## Features
+## Tech Stack
 
-- **Comprehensive Network Support**: Supports routing across 8 major transit lines:
-  - MRT Blue Line (BL)
-  - MRT Purple Line (PP)
-  - MRT Pink Line (PK)
-  - MRT Yellow Line (YL)
-  - SRT Dark Red Line (RN)
-  - Airport Rail Link (ARL)
-  - BTS Sukhumvit Line (LG)
-  - BTS Silom Line (DG)
-- **Accurate Fare Engine**: Calculates exact travel costs utilizing explicitly defined fare matrices for each line.
-- **Interchange & Discount Logic**: Automatically applies conditional discounts when transferring between compatible lines at official interchange stations (e.g., Tao Poon, Lat Phrao, Nonthaburi Civic Center).
-- **Same-Station Routing**: Computes accurate minimum entry/exit fares if the start and end destinations are exactly the same station.
-- **Interactive UI**: A Model-View-Controller (MVC) compliant Java Swing interface that provides step-by-step route breakdowns, grouping consecutive stations by line, and clearly visualizing transfer points.
+- Java 11+
+- Maven
+- Swing for the desktop UI
+- Gson for JSON loading
+- JUnit 5 for tests
 
-## Architecture & Algorithm
+## Project Structure
 
-### Extended Dijkstra Algorithm
+- `src/main/java/com/routefinder/MainApplication.java` - application entry point
+- `src/main/java/com/routefinder/controller/RouteController.java` - UI controller and orchestration layer
+- `src/main/java/com/routefinder/model/` - domain models for lines, stations, and path edges
+- `src/main/java/com/routefinder/service/FareService.java` - route search and fare calculation engine
+- `src/main/java/com/routefinder/service/StationDataService.java` - station and line data loader
+- `src/main/java/com/routefinder/view/` - Swing UI panels and main window
+- `src/test/java/com/routefinder/service/FareServiceTest.java` - route calculation regression tests
+- `docs/codebase-reference.md` - file-by-file and class-by-class documentation
 
-Standard Dijkstra's algorithm is extended to support conditional discounts. The algorithm tracks a composite state during pathfinding: `(Node, Cost, AfterInterchange)`.
+## Architecture
 
-- If a user traverses an `interchange` edge (Cost: 0 THB), the `AfterInterchange` flag is set to true.
-- On the subsequent travel edge, the algorithm consults the discount matrix to reduce the incoming edge's fare if applicable.
+The app follows a simple MVC-style structure:
 
-### Strict Separation of Concerns
+- `view` renders the UI and forwards user actions
+- `controller` coordinates the request and prepares display data
+- `service` contains the routing and fare logic
+- `model` stores the data objects used across the app
 
-All routing and fare logic is strictly confined to the Graph engine (`FareService`). The UI serves purely as a presentation layer—it formats and groups the resulting edge sequences without recalculating or modifying costs.
+The route engine uses an edge-weighted graph with Dijkstra's algorithm. Each node represents a specific station on a specific line, which allows the app to handle same-station interchanges and transfer discounts correctly.
 
-### JSON Data Structure
-
-The application's transit network is fully data-driven and dynamically loaded from `src/main/resources/data.json`, which contains:
-
-- **Stations**: Metadata and UI display names for all nodes.
-- **Edges**: Directional connections representing normal travel (with fare) and Interchange walks (price 0).
-- **Discounts**: A mapping table of transfer discounts (e.g., `BL <-> PP = 14 THB`).
-
-## Installation & Running
+## Running the App
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 11 or higher
+- Java Development Kit (JDK) 11 or newer
 - Maven
 
-### Running the Application
+### Build And Test
 
-**Important**: Ensure you run the Maven commands from the root directory of the project (where the `pom.xml` file is located), *not* inside the `script/` folder.
+Run these commands from the project root, where `pom.xml` is located:
 
-1. Clone or download the repository.
-2. Open a terminal/command prompt in the project's root directory.
-3. Build the project:
+```powershell
+mvn clean test
+```
 
-   ```powershell
-   mvn clean install
-   ```
+### Launch
 
-4. Run the application:
+If you want to run the desktop app from Maven, use:
 
-   ```powershell
-   mvn compile exec:java "-Dexec.mainClass=com.routefinder.MainApplication"
-   ```
+```powershell
+mvn -Dexec.mainClass=com.routefinder.MainApplication exec:java
+```
 
-## Development & Data Maintenance
+If your Maven setup does not already have the Exec plugin available, open the project in an IDE and run `com.routefinder.MainApplication` directly.
 
-If you need to update the fare prices, station definitions, or discount rules:
+## Data Files
 
-1. Update the relevant CSV matrices in `src/main/resources/fare/`.
-2. Run the provided Python synchronization script to rebuild the JSON dataset:
+The application is driven by the resources under `src/main/resources/`:
 
-   ```powershell
-   # Run from the project root
-   python fix_data.py
-   ```
+- `data.json` - station, line, edge, and discount data
+- `color-code.json` - line color mapping for the UI
+- `fare/` - fare matrix CSV files used to maintain route pricing data
+- `logic-new.md` - routing logic notes for the graph engine
 
-3. The application will automatically ingest the updated `data.json` on the next launch.
+## Updating Fare Or Station Data
+
+1. Update the source CSV or JSON data under `src/main/resources/`
+2. Rebuild or refresh any generated data files if needed
+3. Run the tests again with `mvn test`
+
+## Documentation
+
+For a detailed English reference of each source file and class, see:
+
+- `docs/codebase-reference.md`
 
 ## License
 
