@@ -216,6 +216,28 @@ public class FareServiceTest {
     }
 
     @Test
+    public void testSurasakToMoChitUsesBtsDirectFare() {
+        Station start = new Station();
+        start.id = "S5";
+        start.line = "DG";
+
+        Station end = new Station();
+        end.id = "N8";
+        end.line = "LG";
+
+        List<PathEdge> route = fareService.calculateRoute(start, end);
+
+        assertNotNull(route);
+        assertFalse(route.isEmpty());
+
+        double totalCost = route.stream().mapToDouble(e -> e.cost).sum();
+        assertEquals(47.0, totalCost, 0.01, "BTS direct fare should be 47 baht");
+
+        boolean hasBlueLine = route.stream().anyMatch(e -> "BL".equals(e.line));
+        assertFalse(hasBlueLine, "Route should not detour through the Blue Line");
+    }
+
+    @Test
     public void testSameStationSameLine() {
         // PP16 -> PP16
         Station start = new Station();

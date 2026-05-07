@@ -22731,7 +22731,7 @@
             "from": "N8",
             "to": "CEN_LG",
             "line": "LG",
-            "price": 43.0,
+            "price": 47.0,
             "type": "fare"
         },
         {
@@ -28093,7 +28093,7 @@
             "from": "CEN_LG",
             "to": "N8",
             "line": "LG",
-            "price": 43.0,
+            "price": 47.0,
             "type": "fare"
         },
         {
@@ -40655,7 +40655,7 @@
             "from": "RN01",
             "to": "RN08",
             "line": "RN",
-            "price": 30.0,
+            "price": 33.0,
             "type": "fare"
         },
         {
@@ -41096,7 +41096,7 @@
             "from": "RN08",
             "to": "RN01",
             "line": "RN",
-            "price": 30.0,
+            "price": 33.0,
             "type": "fare"
         },
         {

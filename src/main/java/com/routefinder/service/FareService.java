@@ -10,10 +10,13 @@ import com.routefinder.model.Station;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.*;
+import java.io.BufferedReader;
+import java.nio.charset.StandardCharsets;
 
 public class FareService {
 
     private final Map<String, Station> stationMap = new HashMap<>();
+    private final Map<String, List<Station>> stationVariantsById = new HashMap<>();
     private final Map<Node, List<Edge>> adj = new HashMap<>();
     private final Map<String, Map<String, Double>> discounts = new HashMap<>();
 
@@ -35,6 +38,7 @@ public class FareService {
             for (JsonElement element : stationsArray) {
                 Station s = gson.fromJson(element, Station.class);
                 stationMap.put(s.id + "_" + s.line, s);
+                stationVariantsById.computeIfAbsent(normalizeStationId(s.id), k -> new ArrayList<>()).add(s);
             }
 
             // Load edges
@@ -64,6 +68,12 @@ public class FareService {
                 }
             }
 
+            // Add direct BTS fares from the combined Light Green + Dark Green matrix.
+            // This matrix covers the official BTS through-fare between stations on the
+            // Sukhumvit and Silom lines, so we load it as extra direct edges to avoid
+            // forcing the search through an unrelated Blue Line detour.
+            loadDirectFareMatrix("/fare/price_bts_lightgreen_plus_darkgreen.csv");
+
             // Load discounts
             if (data.has("discounts")) {
                 JsonObject discObj = data.getAsJsonObject("discounts");
@@ -77,6 +87,91 @@ public class FareService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void loadDirectFareMatrix(String resourcePath) {
+        try (Reader reader = new InputStreamReader(Objects.requireNonNull(
+                getClass().getResourceAsStream(resourcePath)), StandardCharsets.UTF_8);
+             BufferedReader bufferedReader = new BufferedReader(reader)) {
+
+            String headerLine = bufferedReader.readLine();
+            if (headerLine == null || headerLine.isBlank()) {
+                return;
+            }
+
+            String[] headers = headerLine.split(",");
+            List<String> targetIds = new ArrayList<>();
+            for (int i = 1; i < headers.length; i++) {
+                targetIds.add(headers[i].trim());
+            }
+
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.isBlank()) {
+                    continue;
+                }
+
+                String[] parts = line.split(",");
+                if (parts.length < 2) {
+                    continue;
+                }
+
+                String fromId = parts[0].trim();
+                List<Station> fromStations = stationVariantsById.get(normalizeStationId(fromId));
+                if (fromStations == null || fromStations.isEmpty()) {
+                    continue;
+                }
+
+                for (int i = 1; i < parts.length && i <= targetIds.size(); i++) {
+                    String priceText = parts[i].trim();
+                    if (priceText.isEmpty()) {
+                        continue;
+                    }
+
+                    double price;
+                    try {
+                        price = Double.parseDouble(priceText);
+                    } catch (NumberFormatException ex) {
+                        continue;
+                    }
+
+                    String toId = targetIds.get(i - 1);
+                    List<Station> toStations = stationVariantsById.get(normalizeStationId(toId));
+                    if (toStations == null || toStations.isEmpty()) {
+                        continue;
+                    }
+
+                    for (Station fromStation : fromStations) {
+                        for (Station toStation : toStations) {
+                            if (!isBtsLine(fromStation.line) || !isBtsLine(toStation.line)) {
+                                continue;
+                            }
+
+                            Node u = new Node(fromStation.id, fromStation.line);
+                            Node v = new Node(toStation.id, toStation.line);
+                            adj.computeIfAbsent(u, k -> new ArrayList<>()).add(new Edge(v, price, false));
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            // If the matrix is unavailable, keep the app functional with the base graph.
+            e.printStackTrace();
+        }
+    }
+
+    private String normalizeStationId(String stationId) {
+        if (stationId == null) {
+            return "";
+        }
+        if (stationId.startsWith("CEN_")) {
+            return "CEN";
+        }
+        return stationId;
+    }
+
+    private boolean isBtsLine(String lineCode) {
+        return "DG".equals(lineCode) || "LG".equals(lineCode);
     }
 
     public List<PathEdge> calculateRoute(Station start, Station end) {
