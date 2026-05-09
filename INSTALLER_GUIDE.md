@@ -124,9 +124,26 @@ Batch wrapper that:
 
 ## Distribution
 
-### Package for Distribution
+### Quick Start: Create Release Package
 
-To create a distribution package:
+The easiest way to create a distributable release:
+
+```powershell
+# Generate release ZIP file (automatically compresses installer/)
+.\build-release-zip.ps1 -Version "1.0.0"
+```
+
+This creates `releases/RouteFinder-1.0.0.zip` (~60-100 MB) ready to share.
+
+**For Users:**
+- Download the ZIP
+- Extract it
+- Run `Install-RouteFinder.bat`
+- Done!
+
+### Manual Package for Distribution
+
+If you prefer manual control:
 
 1. Build the installer:
    ```powershell
@@ -135,7 +152,6 @@ To create a distribution package:
 
 2. Copy installer files:
    ```powershell
-   # Copy installer directory to distribution location
    Copy-Item -Path "installer" -Destination "RouteFinder-1.0.0" -Recurse
    ```
 
@@ -144,31 +160,44 @@ To create a distribution package:
    Compress-Archive -Path "RouteFinder-1.0.0" -DestinationPath "RouteFinder-1.0.0.zip"
    ```
 
-4. Share the ZIP file or files
+4. Share the ZIP file
 
-### Alternative: Windows Installer Package
+### Release Package Contents
 
-To create a traditional `.exe` installer, you can use NSIS or Inno Setup:
-
-#### Using NSIS (if small installer desired)
-
-Create `installer.nsi`:
-```nsis
-OutFile "RouteFinder-Setup.exe"
-InstallDir "$PROGRAMFILES\RouteFinder"
-Section "Install"
-    SetOutPath "$INSTDIR"
-    File "routefinder-fat.jar"
-    File "RouteFinder.bat"
-    SetOutPath "$INSTDIR\jre"
-    File /r "jre\*.*"
-SectionEnd
+```
+RouteFinder-1.0.0.zip
+└── RouteFinder/
+    ├── Install-RouteFinder.bat      ← Users run this
+    ├── RouteFinder.bat              (Application launcher)
+    ├── RouteFinder-Installer.ps1    (PowerShell installer)
+    ├── routefinder-fat.jar          (Application)
+    ├── icon.ico                     (Icon)
+    └── jre/                         (Portable Java Runtime)
+        ├── bin/
+        ├── lib/
+        └── ...
 ```
 
-Compile:
+### Future: Windows Installer Package (EXE)
+
+To create a traditional `.exe` installer, you can use NSIS (optional enhancement):
+
+#### Using NSIS (Professional Installer)
+
+The `installer.nsi` script is already prepared for creating a `.exe` installer:
+
 ```powershell
-& "C:\Program Files (x86)\NSIS\makensis.exe" installer.nsi
+# Requires NSIS to be installed
+& "C:\Program Files (x86)\NSIS\makensis.exe" installer\installer.nsi
 ```
+
+This would create `RouteFinder-1.0.0-installer.exe` with:
+- Professional installation wizard
+- Integration with Windows Add/Remove Programs
+- Easy uninstall from Control Panel
+- One-click installation experience
+
+**Current Status**: ZIP distribution is recommended for initial releases due to simplicity and universal compatibility.
 
 ## Uninstallation
 
